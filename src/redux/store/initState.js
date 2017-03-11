@@ -23,5 +23,8 @@ export default {
     //   completed: false,
     //   createdAt: 1473499991348
     // }
-  ]
+  ],
+
+  /** 计数器模块 */
+  count: 0
 }

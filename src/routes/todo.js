@@ -4,6 +4,14 @@ import createContainer from 'UTIL/createContainer'
 export default {
   path: 'todo',
 
+  onEnter () {
+    console.log('on enter')
+  },
+
+  onLeave () {
+    console.log('on leave')
+  },
+
   /* 布局基页 */
   getComponent (nextState, cb) {
     require.ensure([], (require) => {

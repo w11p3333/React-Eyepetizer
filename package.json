@@ -12,6 +12,7 @@
     "url": "https://github.com/kenberkeley/react-demo.git"
   },
   "dependencies": {
+    "cross-env": "^3.2.3",
     "history": "^2.0.0",
     "lodash": "^4.15.0",
     "react": "~15.3.1",
