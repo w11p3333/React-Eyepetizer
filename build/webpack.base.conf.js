@@ -15,7 +15,7 @@ var commonPath = {
 module.exports = {
   commonPath: commonPath,
   entry: {
-    app: path.join(src, 'app.js'),
+    app: path.join(src, 'main.js'),
 
     // ================================
     // 框架 / 类库 分离打包

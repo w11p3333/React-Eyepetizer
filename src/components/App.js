@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from 'COMPONENT/Navbar/'
-
+import 'ASSET/scss/normalize.scss'
+import 'ASSET/scss/app.scss'
 let DevTools
 if (__DEV__ && __COMPONENT_DEVTOOLS__) {
   // 组件形式的 Redux DevTools
@@ -9,8 +9,7 @@ if (__DEV__ && __COMPONENT_DEVTOOLS__) {
 
 const App = ({ children, location }) => (
   <div>
-    <Navbar location={location} />
-  
+
     <div className="container">
       {/* 相当于 Vue Demo 中的根 router-view */}
       { children }

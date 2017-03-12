@@ -26,5 +26,13 @@ export default {
   ],
 
   /** 计数器模块 */
-  count: 0
+  count: 0,
+
+  /** 视频信息 */
+  videoInfo: {
+    title: '1',
+    cat: '1',
+    time: '1',
+    desc: '1'
+  }
 }

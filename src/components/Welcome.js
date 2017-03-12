@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import 'ASSET/scss/welcome.scss'
 /**
  * 本组件为欢迎页（首页）
  * 由于几乎没有交互逻辑
@@ -9,29 +10,16 @@ import { Link } from 'react-router'
  * 其实还是返回一个类似的函数
  */
 const Welcome = () => (
-  <div className="jumbotron">
-    <h1>欢迎使用 <br/> React Demo</h1>
-    <p>
+  <div className="welcome">
+    <h1>开眼 React.js App</h1>
+    <h2>Links</h2>
+    <ul>
       <Link
-        to="/msg"
-        role="button"
-        className="btn btn-success btn-lg">
-        前往留言板 &gt;
+        to="/video/14416"
+        role="li">
+        视频详情
       </Link>
-      &nbsp;
-      <Link
-        to="/todo"
-        role="button"
-        className="btn btn-success btn-lg">
-        前往待办事项(新功能) &gt;
-      </Link>
-      <Link
-        to="/count"
-        role="button"
-        className="btn btn-success btn-lg">
-        前往计数器 &gt;
-      </Link>
-    </p>
+    </ul>
   </div>
 )
 
