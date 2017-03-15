@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import 'ASSET/scss/detail.scss'
+import Tag from './tag'
 export default class Detail extends Component {
 
   constructor (props) {
@@ -16,22 +17,6 @@ export default class Detail extends Component {
 
   }
 
-  renderTag (titleVideo) {
-    if (titleVideo.tags && titleVideo.tags.length > 0) {
-      return (
-        <div className="tag-list-container">
-          <hander className="text-center">热门标签</hander>
-          <div className="tag-list">
-            {titleVideo.tags.map(tag =>
-              <span className="tag">{tag.name}</span>
-            )}
-          </div>
-          <div className="divider" />
-        </div>
-      )
-    }
-  }
-
   render () {
     console.log(this.props)
     const { videoInfo } = this.props
@@ -45,6 +30,8 @@ export default class Detail extends Component {
               <p className="desciption">{videoInfo.description}</p>
             </div>
           </div>
+          <div className="divider" />
+          <Tag tags={videoInfo.tags} />
         </div>
     )
   }
