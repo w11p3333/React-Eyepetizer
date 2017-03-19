@@ -15,11 +15,11 @@ export default {
     getComponent (nextState, cb) {
       require.ensure([], (require) => {
         // 注入 Reducer
-        injectReducer('videoInfo', require('REDUCER/video').default)
+        injectReducer('videos', require('REDUCER/video').default)
 
         /* 组件连接 state */
         const TodoContainer = createContainer(
-          ({ videoInfo }) => ({ videoInfo }),        // mapStateToProps,
+          ({ videos }) => ({ videos }),        // mapStateToProps,
           require('ACTION/video').default,    // mapActionCreators,
           require('COMPONENT/video/').default // 木偶组件
         )

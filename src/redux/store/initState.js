@@ -28,11 +28,16 @@ export default {
   /** 计数器模块 */
   count: 0,
 
+  videos: {
+
   /** 视频信息 */
-  videoInfo: {
-    title: '1',
-    cat: '1',
-    time: '1',
-    desc: '1'
+  videoInfo: null,
+
+  /** 视频列表 */
+  videoList: null,
+
+  /** 回复列表 */
+  replyList: null
+
   }
 }
