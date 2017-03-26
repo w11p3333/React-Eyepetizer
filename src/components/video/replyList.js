@@ -1,14 +1,13 @@
 import React from 'react'
 
 const ReplyList = ({ replyList }) => {
-    console.log(replyList)
     return (
         <div>
           <div className="reply-list-container">
             <header className="text-center">热门评论</header>
             <div className="reply-list">
                 {
-                    replyList && replyList.map(reply => 
+                    replyList && replyList.map(reply =>
                         <div className="reply">
                           <div className="avatar" style={reply.cover} />
                           <div className="entity">
