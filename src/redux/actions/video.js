@@ -6,7 +6,7 @@ import dateFormatter from 'UTIL/dateTimeFormatter'
 // ================================
 const FETCH_VIDEO_INFO = 'FETCH_VIDEO_INFO'
 const FETCH_REPLY_LIST = 'FETCH_REPLY_LIST'
-const FETCH_RELATE_VIDEO_LIST = 'FETCH_RELATE_VIDEO_LIST'
+const FETCH_VIDEO_LIST = 'FETCH_VIDEO_LIST'
 
 // ================================
 // Action Creator
@@ -19,12 +19,12 @@ const fetchVideoInfo = id => dispatch =>
       payload: res.data
     }))
 
-const fetchRelateVideoList = id => dispatch => 
+const fetchVideoList = id => dispatch =>
   videoService
-    .fetchRelateVideoList(id)
+    .fetchVideoList(id)
     .then(res => dispatch({
-      type: FETCH_RELATE_VIDEO_LIST,
-      PAYLOAD: res.data
+      type: FETCH_VIDEO_LIST,
+      payload: res.data
     }))
 
 const fetchReplyList = id => dispatch =>
@@ -38,7 +38,7 @@ const fetchReplyList = id => dispatch =>
 /* default 导出所有 Action Creators */
 export default {
   fetchVideoInfo,
-  fetchRelateVideoList,
+  fetchVideoList,
   fetchReplyList
 }
 // ================================
@@ -49,7 +49,8 @@ export const ACTION_HANDLERS = {
     payload.time = dateFormatter(payload.duration * 1000)
     return { ...videos, videoInfo: payload }
   },
-  [FETCH_RELATE_VIDEO_LIST]: (videos, { payload }) => {
+  [FETCH_VIDEO_LIST]: (videos, { payload }) => {
+    console.log('its me', payload.videoList)
     payload.videoList.map(video => {
       video.time = dateFormatter(video.duration * 1000)
       video.cover = {
