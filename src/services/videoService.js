@@ -11,7 +11,7 @@ class VideoService {
     return axios.get(`${VIDEO_DETAIL_URL}/${id}`)
   }
 
-  fetchRelateVideoList (id) {
+  fetchVideoList (id) {
     return axios.get(`${RELATE_VIDEO_LIST_URL}/${id}?num=10`)
   }
 
