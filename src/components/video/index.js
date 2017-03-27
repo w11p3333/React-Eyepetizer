@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import 'ASSET/scss/detail.scss'
+import VideoPlayer from './videoPlayer'
 import Info from './info'
 import RelateVideo from './relateVideo'
 import ReplyList from './replyList'
 import Tag from './tag'
 import Footer from './footer'
+import 'ASSET/scss/detail.scss'
+
 export default class Detail extends Component {
 
   constructor (props) {
@@ -29,24 +31,30 @@ export default class Detail extends Component {
     const { videos } = this.props
     const { videoInfo, replyList, videoList } = videos
     return (
-        <div className="video-info">
-          <Info videoInfo={videoInfo} />
-          <div className="divider" />
-          <div className="video-cover-blurred" />
-          <div className="divider" />
-          {
-            videoList &&
-            <RelateVideo videoList={videoList.videoList} />
-          }
-          {
-            replyList &&
-            <ReplyList replyList={replyList.replyList} />
-          }
+        <div className="container">
           {
             videoInfo &&
-            <Tag tags={videoInfo.tags} />
+            <VideoPlayer url={videoInfo.playUrl} />
           }
-          <Footer />
+          <div className="video-info">
+            <Info videoInfo={videoInfo} />
+            <div className="divider" />
+            <div className="video-cover-blurred" />
+            <div className="divider" />
+            {
+              videoList &&
+              <RelateVideo videoList={videoList.videoList} />
+            }
+            {
+              replyList &&
+              <ReplyList replyList={replyList.replyList} />
+            }
+            {
+              videoInfo &&
+              <Tag tags={videoInfo.tags} />
+            }
+            <Footer />
+          </div>
         </div>
     )
   }
