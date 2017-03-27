@@ -4733,6 +4733,10 @@ react-hot-loader@^1.3.0:
     react-hot-api "^0.4.5"
     source-map "^0.4.4"
 
+react-html5video@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/react-html5video/-/react-html5video-2.1.0.tgz#e6d1e29487a5949d058a7ef78b60138d129c8e96"
+
 react-json-tree@^0.10.0:
   version "0.10.5"
   resolved "https://registry.npmjs.org/react-json-tree/-/react-json-tree-0.10.5.tgz#7e18dc65f8df5b30ff98d4e95f98564ded4add63"
