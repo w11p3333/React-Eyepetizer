@@ -40,15 +40,16 @@ export default class Detail extends Component {
             <Info videoInfo={videoInfo} />
             <div className="divider" />
             <div className="video-cover-blurred" />
-            <div className="divider" />
             {
               videoList &&
               <RelateVideo videoList={videoList.videoList} />
             }
+            <div className="divider" />
             {
               replyList &&
               <ReplyList replyList={replyList.replyList} />
             }
+            <div className="divider" />
             {
               videoInfo &&
               <Tag tags={videoInfo.tags} />

@@ -46,26 +46,25 @@
     }
    .video-info{
       position: relative;
-      .meta-positioner{
-        .video-meta{
-          padding: 15px;
-          padding-bottom: 4px;
-          background: rgba(0,0,0,.2);
-          h1{
-            font-size: 20px;
-            margin: 0;
-            margin-bottom: 7px;
-          }
-          .divider{
-            margin-bottom: 7px;
-          }
-          p{
-            margin: 0;
-            margin-bottom: 12px;
-            &.desciption{
-              margin-bottom: 11px;
-              opacity: .85;
-            }
+      z-index: 10;
+      .video-meta{
+        padding: 15px;
+        padding-bottom: 4px;
+        background: rgba(0,0,0,.2);
+        h1{
+          font-size: 20px;
+          margin: 0;
+          margin-bottom: 7px;
+        }
+        .divider{
+          margin-bottom: 7px;
+        }
+        p{
+          margin: 0;
+          margin-bottom: 12px;
+          &.desciption{
+            margin-bottom: 11px;
+            opacity: .85;
           }
         }
       }

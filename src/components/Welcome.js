@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import logo from 'ASSET/img/logo.svg'
 import 'ASSET/scss/welcome.scss'
 /**
  * 本组件为欢迎页（首页）
@@ -11,6 +12,7 @@ import 'ASSET/scss/welcome.scss'
  */
 const Welcome = () => (
   <div className="welcome">
+    <img src={logo} className="app-logo" alt="logo" />
     <h1>开眼 React.js App</h1>
     <h2>Links</h2>
     <ul>
