@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ReplyList = ({ replyList }) => (
+export default ({ replyList }) => (
   <div className="reply-list-container">
     <header className="text-center">热门评论</header>
     <div className="reply-list">
@@ -23,5 +23,3 @@ const ReplyList = ({ replyList }) => (
     </div>
   </div>
 )
-
-export default ReplyList

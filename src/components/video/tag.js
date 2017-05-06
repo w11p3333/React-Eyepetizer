@@ -2,7 +2,7 @@ import React from 'react'
 /**
  * 标签页
  */
-const Tag = ({ tags }) => (
+export default ({ tags }) => (
   <div className="tag-list-container">
     <hander className="text-center">热门标签</hander>
     <div className="tag-list">
@@ -13,5 +13,3 @@ const Tag = ({ tags }) => (
     <div className="divider" />
   </div>
 )
-
-export default Tag

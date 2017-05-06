@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const RelateVideo = ({ videoList }) => (
+export default ({ videoList }) => (
   <div className="relate-video-list">
   {
     videoList &&
@@ -22,4 +22,3 @@ const RelateVideo = ({ videoList }) => (
   }
   </div>
 )
-export default RelateVideo

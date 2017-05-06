@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Info = ({ videoInfo }) => (
+export default ({ videoInfo }) => (
   <div className="video-meta">
      {
         videoInfo &&
@@ -13,5 +13,3 @@ const Info = ({ videoInfo }) => (
      }
   </div>
 )
-
-export default Info

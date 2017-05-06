@@ -10,7 +10,8 @@ import 'ASSET/scss/welcome.scss'
  * 实际上，ES6 的类经由 Babel 转码后
  * 其实还是返回一个类似的函数
  */
-const Welcome = () => (
+
+export default () => (
   <div className="welcome">
     <img src={logo} className="app-logo" alt="logo" />
     <h1>开眼 React.js App</h1>
@@ -24,5 +25,3 @@ const Welcome = () => (
     </ul>
   </div>
 )
-
-export default Welcome

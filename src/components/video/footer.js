@@ -4,7 +4,7 @@ import 'ASSET/scss/footer.scss'
 /**
  * 底部
  */
-const Footer = _ => (
+export default _ => (
     <footer className="footer">
       <Link to="/">
         <div className="bottom-logo" />
@@ -14,4 +14,3 @@ const Footer = _ => (
     </footer>
 )
 
-export default Footer

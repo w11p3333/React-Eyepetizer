@@ -2,7 +2,7 @@ import React from 'react'
 import { DefaultPlayer as Video } from 'react-html5video'
 import 'react-html5video/dist/styles.css'
 
-const VideoPlayer = ({ url }) => (
+export default ({ url }) => (
   <div className="player">
     {
       url &&
@@ -16,5 +16,3 @@ const VideoPlayer = ({ url }) => (
     }
   </div>
 )
-
-export default VideoPlayer

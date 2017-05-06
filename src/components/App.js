@@ -7,16 +7,11 @@ if (__DEV__ && __COMPONENT_DEVTOOLS__) {
   DevTools = require('COMPONENT/DevTools').default
 }
 
-const App = ({ children, location }) => (
+export default ({ children, location }) => (
   <div>
-
     <div className="container">
-      {/* 相当于 Vue Demo 中的根 router-view */}
       { children }
     </div>
-
     { DevTools && <DevTools /> }
   </div>
 )
-
-export default App

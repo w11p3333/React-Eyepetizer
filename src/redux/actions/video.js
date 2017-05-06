@@ -50,7 +50,6 @@ export const ACTION_HANDLERS = {
     return { ...videos, videoInfo: payload }
   },
   [FETCH_VIDEO_LIST]: (videos, { payload }) => {
-    console.log('its me', payload.videoList)
     payload.videoList.map(video => {
       video.time = dateFormatter(video.duration * 1000)
       video.cover = {
