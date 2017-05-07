@@ -14,17 +14,22 @@ export default {
   indexRoute: {
     getComponent (nextState, cb) {
       require.ensure([], (require) => {
-        // 注入 Reducer
-        injectReducer('videos', require('REDUCER/video').default)
+        const REDUCE_LIST = [
+          'playVideoInfo',
+          'videoListInfo',
+          'replyListInfo'
+        ]
+         // 注入 Reducer
+        REDUCE_LIST.map(reduce => injectReducer(reduce, require(`REDUCER/${reduce}`).default))
 
         /* 组件连接 state */
-        const TodoContainer = createContainer(
-          ({ videos }) => ({ videos }),        // mapStateToProps,
+        const VideoContainer = createContainer(
+          ({ playVideoInfo, videoListInfo, replyListInfo }) => ({ playVideoInfo, videoListInfo, replyListInfo }),        // mapStateToProps,
           require('ACTION/video').default,    // mapActionCreators,
           require('COMPONENT/video/').default // 木偶组件
         )
 
-        cb(null, TodoContainer)
+        cb(null, VideoContainer)
       }, 'video')
     }
   }

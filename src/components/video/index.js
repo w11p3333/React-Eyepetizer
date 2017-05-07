@@ -28,27 +28,26 @@ export default class Detail extends Component {
   }
 
   render () {
-    const { videos } = this.props
-    const { videoInfo, replyList, videoList } = videos
+    const { playVideoInfo, videoListInfo, replyListInfo } = this.props
     return (
         <div className="container">
           {
-            videoInfo && <VideoPlayer url={videoInfo.playUrl} />
+            playVideoInfo && <VideoPlayer url={playVideoInfo.playUrl} />
           }
           <div className="video-info">
-            <Info videoInfo={videoInfo} />
+            <Info videoInfo={playVideoInfo} />
             <div className="divider" />
             <div className="video-cover-blurred" />
             {
-              videoList && <RelateVideo videoList={videoList.videoList} />
+              videoListInfo && <RelateVideo videoList={videoListInfo.videoList} />
             }
             <div className="divider" />
             {
-              replyList && <ReplyList replyList={replyList.replyList} />
+              replyListInfo && <ReplyList replyList={replyListInfo.replyList} />
             }
             <div className="divider" />
             {
-              videoInfo && <Tag tags={videoInfo.tags} />
+              playVideoInfo && <Tag tags={playVideoInfo.tags} />
             }
             <Footer />
           </div>

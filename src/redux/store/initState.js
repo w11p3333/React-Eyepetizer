@@ -1,18 +1,16 @@
 /**
  * 本文件的作用就是直观呈现 整个应用状态结构树 及其 初始值
  */
+// import {
+//   Map
+// } from 'immutable'
+
 export default {
 
-  videos: {
+  playVideoInfo: null,
 
-  /** 视频信息 */
-  videoInfo: null,
+  videoListInfo: null,
 
-  /** 视频列表 */
-  videoList: null,
+  replyListInfo: null
 
-  /** 回复列表 */
-  replyList: null
-
-  }
 }
