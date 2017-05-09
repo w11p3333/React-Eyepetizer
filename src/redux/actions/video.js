@@ -1,11 +1,11 @@
-import videoService from 'SERVICE/videoService'
+import videoApi from 'API/video'
 import * as consts from 'CONST'
 
 // ================================
 // Action Creator
 // ================================
 const fetchVideoInfo = id => dispatch =>
-  videoService
+  videoApi
     .fetchVideoInfo(id)
     .then(({ data: payload }) => dispatch({
       type: consts.FETCH_VIDEO_INFO,
@@ -13,7 +13,7 @@ const fetchVideoInfo = id => dispatch =>
     }))
 
 const fetchVideoList = id => dispatch =>
-  videoService
+  videoApi
     .fetchVideoList(id)
     .then(({ data: payload }) => dispatch({
       type: consts.FETCH_VIDEO_LIST,
@@ -21,7 +21,7 @@ const fetchVideoList = id => dispatch =>
     }))
 
 const fetchReplyList = id => dispatch =>
-  videoService
+  videoApi
     .fetchReplyList(id)
     .then(({ data: payload }) => dispatch({
       type: consts.FETCH_REPLY_LIST,
