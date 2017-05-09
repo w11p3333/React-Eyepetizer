@@ -3,22 +3,18 @@ import { Link } from 'react-router'
 
 export default ({ videoList }) => (
   <div className="relate-video-list">
-  {
-    videoList &&
-    videoList.map(video =>
-      <Link
-        to={{
-          pathname: `/video/${video.id}`
-        }}>
-        <div className="relate-video" data-vid={video.id}>
-          <div className="relate-cover" style={video.cover} />
-          <div className="meta">
-            <div className="title">{video.title}</div>
-            <div className="category">#{video.category} / {video.time}</div>
+    {
+      videoList.map(video => (
+        <Link to={ { pathname: `/video/${video.get('id')}` } }>
+          <div className="relate-video" data-vid={video.get('id')}>
+            <div className="relate-cover" style={ { backgroundImage: `url(${video.get('coverForDetail')})` } } />
+            <div className="meta">
+              <div className="title">{video.get('title')}</div>
+              <div className="category">#{video.get('category')} / {video.get('time')}</div>
+            </div>
           </div>
-        </div>
-      </Link>
-    )
-  }
+        </Link>
+      ))
+  } 
   </div>
 )

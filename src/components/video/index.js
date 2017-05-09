@@ -32,22 +32,26 @@ export default class Detail extends Component {
     return (
         <div className="container">
           {
-            playVideoInfo && <VideoPlayer url={playVideoInfo.playUrl} />
+            playVideoInfo.count() && 
+            <VideoPlayer url={playVideoInfo.get('playUrl')} />
           }
           <div className="video-info">
             <Info videoInfo={playVideoInfo} />
             <div className="divider" />
             <div className="video-cover-blurred" />
             {
-              videoListInfo && <RelateVideo videoList={videoListInfo.videoList} />
+              videoListInfo.count() && 
+              <RelateVideo videoList={videoListInfo.get('videoList')} />
             }
             <div className="divider" />
             {
-              replyListInfo && <ReplyList replyList={replyListInfo.replyList} />
+              replyListInfo.count() && 
+              <ReplyList replyList={replyListInfo.get('replyList')} />
             }
             <div className="divider" />
             {
-              playVideoInfo && <Tag tags={playVideoInfo.tags} />
+              playVideoInfo.count() && 
+              <Tag tags={playVideoInfo.get('tags')} />
             }
             <Footer />
           </div>

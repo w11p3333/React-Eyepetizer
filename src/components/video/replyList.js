@@ -5,15 +5,15 @@ export default ({ replyList }) => (
     <header className="text-center">热门评论</header>
     <div className="reply-list">
         {
-            replyList && replyList.map(reply =>
+            replyList.map(reply =>
                 <div className="reply">
-                  <div className="avatar" style={reply.cover} />
+                  <div className="avatar" style={ { backgroundImage: `url(${reply.get('user').get('avatar')})` } } />
                   <div className="entity">
-                    <p className="username" data-uid={reply.uid}>{reply.username}</p>
-                    <p className="time">{reply.time}</p>
-                    <p className="text">{reply.message}</p>
+                    <p className="username" data-uid={reply.get('user').get('uid')}>{reply.get('user').get('nickname')}</p>
+                    <p className="time">{reply.get('time')}</p>
+                    <p className="text">{reply.get('message')}</p>
                     {
-                        reply.hot &&
+                        reply.get('hot') &&
                         <div className="link-count-hot">- Hot -</div>
                     }
                   </div>
