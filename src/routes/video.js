@@ -1,6 +1,8 @@
 import { injectReducer } from 'REDUCER'
 import createContainer from 'UTIL/createContainer'
-
+import {
+  fromJS
+} from 'immutable'
 export default {
   path: 'video/:id',
 
@@ -24,7 +26,15 @@ export default {
 
         /* 组件连接 state */
         const VideoContainer = createContainer(
-          ({ playVideoInfo, videoListInfo, replyListInfo }) => ({ playVideoInfo, videoListInfo, replyListInfo }),        // mapStateToProps,
+          ({ playVideoInfo, videoListInfo, replyListInfo }) => {
+            return {
+              videoState: fromJS({
+                playVideoInfo,
+                videoListInfo,
+                replyListInfo
+              })
+            }
+          },        // mapStateToProps,
           require('ACTION/video').default,    // mapActionCreators,
           require('COMPONENT/video/').default // 木偶组件
         )

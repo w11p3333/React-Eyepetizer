@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { is } from 'immutable'
 import VideoPlayer from './videoPlayer'
 import Info from './info'
 import RelateVideo from './relateVideo'
@@ -27,8 +28,14 @@ export default class Detail extends Component {
 
   }
 
+  shouldComponentUpdate (nextProps) {
+    return !is(nextProps.videoState, this.props.videoState)
+  }
+
   render () {
-    const { playVideoInfo, videoListInfo, replyListInfo } = this.props
+    const playVideoInfo = this.props.videoState.get('playVideoInfo')
+    const videoListInfo = this.props.videoState.get('videoListInfo')
+    const replyListInfo = this.props.videoState.get('replyListInfo')
     return (
         <div className="container">
           {
