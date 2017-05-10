@@ -36,7 +36,7 @@ export default {
             }
           },        // mapStateToProps,
           require('ACTION/video').default,    // mapActionCreators,
-          require('COMPONENT/video/').default // 木偶组件
+          require('COMPONENT/video').default // 木偶组件
         )
 
         cb(null, VideoContainer)

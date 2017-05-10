@@ -1,3 +1,4 @@
+// @flow
 import createReducer from 'UTIL/createReducer'
 import state from 'STORE/initState'
 import dateFormatter from 'UTIL/dateTimeFormatter'

@@ -1,3 +1,4 @@
+// @flow
 /**
  * React 不像 Angular/Vue 等具备双向绑定能力
  * 因此需要手动监听输入框 change 事件同步 state
@@ -23,8 +24,8 @@
  * 之后就可以这样写了
  * onClick={this.handleChange}
  */
-export default function handleChange(evt) {
+export default function handleChange(event: Object) {
   this.setState({
-    [evt.target.name]: evt.target.value.trim()
+    [event.target.name]: event.target.value.trim()
   })
 }

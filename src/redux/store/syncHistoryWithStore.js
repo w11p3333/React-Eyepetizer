@@ -1,3 +1,4 @@
+// @flow
 // ========================================================
 // 同步 history 配置
 // ========================================================
@@ -15,7 +16,7 @@ export const historyMiddleware = routerMiddleware(browserHistory)
  * @param  {Store}
  * @return {History} 增强版 history
  */
-export default function (store) {
+export default function (store: Object) {
   return syncHistoryWithStore(
     browserHistory,
     store,

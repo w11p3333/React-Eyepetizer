@@ -1,5 +1,6 @@
+// @flow
 import moment from 'moment'
-export default function dateFormatter (milliseconds) {
+export default function dateFormatter (milliseconds: number): string {
   const durationObj = moment.duration(milliseconds)
   const minutes = durationObj.minutes()
   const seconds = durationObj.seconds()

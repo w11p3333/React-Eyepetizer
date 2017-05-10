@@ -73,7 +73,7 @@ export default class Detail extends Component {
             <PlayingInfo videoInfo={playVideoInfo} />
             <Divider />
             <Cover />
-             {
+            {
               videoListInfo.count() && 
               <RelateList videoList={videoListInfo.get('videoList')} />
             }

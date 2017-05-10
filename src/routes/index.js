@@ -1,3 +1,4 @@
+// @flow
 export default {
   path: '/',
 
@@ -18,17 +19,3 @@ export default {
     { path: '*', component: require('COMPONENT/404').default }
   ]
 }
-
-/*
-  当前路由树如下
-  ├ /
-  |
-  ├ /msg
-  ├ /msg/add
-  ├ /msg/detail/:msgId
-  ├ /msg/modify/:msgId
-  |
-  ├ /todo
-  |
-  ├ /redirect
-*/

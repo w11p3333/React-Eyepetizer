@@ -1,31 +1,32 @@
+// @flow
 import videoApi from 'API/video'
 import * as consts from 'CONST'
 
 // ================================
 // Action Creator
 // ================================
-const fetchVideoInfo = id => dispatch =>
+const fetchVideoInfo: Function = (id: number) => (dispatch: Function) =>
   videoApi
     .fetchVideoInfo(id)
-    .then(({ data: payload }) => dispatch({
+    .then((res: Object) => dispatch({
       type: consts.FETCH_VIDEO_INFO,
-      payload
+      payload: res.data
     }))
 
-const fetchVideoList = id => dispatch =>
+const fetchVideoList: Function = (id: number) => (dispatch: Function) =>
   videoApi
     .fetchVideoList(id)
-    .then(({ data: payload }) => dispatch({
+    .then((res: Object) => dispatch({
       type: consts.FETCH_VIDEO_LIST,
-      payload
+      payload: res.data
     }))
 
-const fetchReplyList = id => dispatch =>
+const fetchReplyList: Function = (id: number) => (dispatch: Function) =>
   videoApi
     .fetchReplyList(id)
-    .then(({ data: payload }) => dispatch({
+    .then((res: Object) => dispatch({
       type: consts.FETCH_REPLY_LIST,
-      payload
+      payload: res.data
     }))
 
 /* default 导出所有 Action Creators */

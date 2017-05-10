@@ -1,3 +1,4 @@
+// @flow
 import { connect } from 'react-redux'
 
 /**
@@ -7,7 +8,7 @@ import { connect } from 'react-redux'
  * @param  {Component?}
  * @return {Connect : Container}
  */
-export default function createContainer(mapStateToProps, mapActionCreators, component) {
+export default function createContainer(mapStateToProps: Function, mapActionCreators: Object, component: Object) {
   const connectComponent = connect(mapStateToProps, mapActionCreators)
   return component ? connectComponent(component) : connectComponent
 }

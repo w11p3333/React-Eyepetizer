@@ -1,3 +1,4 @@
+// @flow
 import { applyMiddleware, compose, createStore } from 'redux'
 import { createRootReducer } from 'REDUCER'
 import middlewares from './middlewares'
