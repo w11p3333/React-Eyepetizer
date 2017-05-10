@@ -1,27 +1,36 @@
 import React from 'react'
 import { Link } from 'react-router'
 import logo from 'ASSET/img/logo.svg'
-import 'ASSET/scss/welcome.scss'
-/**
- * 本组件为欢迎页（首页）
- * 由于几乎没有交互逻辑
- * 因此可以不使用类的写法
- *
- * 实际上，ES6 的类经由 Babel 转码后
- * 其实还是返回一个类似的函数
- */
+import styled, { keyframes } from 'styled-components'
+
+const Container = styled.div`
+  text-align:center;
+  margin-top:60px;
+`
+
+const rotateAnimation = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`
+
+const Logo = styled.img`
+  animation: ${rotateAnimation} infinite 20s linear;
+  height: 80px;
+`
+
+const Title = styled.h1`
+  font-weight: normal;
+`
 
 export default () => (
-  <div className="welcome">
-    <img src={logo} className="app-logo" alt="logo" />
-    <h1>开眼 React.js App</h1>
-    <h2>Links</h2>
-    <ul>
-      <Link
-        to="/video/14416"
-        role="li">
-        视频详情
-      </Link>
-    </ul>
-  </div>
+  <Container>
+    <Logo src={logo} alt="logo" />
+    <Title>开眼 React.js App</Title>
+    <Link
+      style={ { color: 'white' } }
+      to="/video/14416"
+      role="li">
+      视频详情
+    </Link>
+  </Container>
 )

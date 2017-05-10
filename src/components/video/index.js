@@ -1,12 +1,39 @@
 import React, { Component } from 'react'
 import { is } from 'immutable'
-import VideoPlayer from './videoPlayer'
-import Info from './info'
-import RelateVideo from './relateVideo'
-import ReplyList from './replyList'
-import Tag from './tag'
-import Footer from './footer'
-import 'ASSET/scss/detail.scss'
+
+import Player from 'COMPONENT/video/player'
+import PlayingInfo from 'COMPONENT/video/playingInfo'
+import RelateList from 'COMPONENT/video/relateList'
+import ReplyList from 'COMPONENT/video/replyList'
+import Tag from 'COMPONENT/video/tag'
+import Footer from 'COMPONENT/video/footer'
+import Divider from 'COMPONENT/video/common/divider'
+
+import styled from 'styled-components'
+
+const Container = styled.div`
+  margin:0px auto;
+  max-width: 700px;
+  overflow: hidden;
+`
+
+const Cover = styled.div`
+  background-position: 50%;
+  background-size: 100% 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(180deg) scaleX(-1);
+  transform: rotate(180deg) scaleX(-1);
+  width: 100%;
+  z-index: -10;
+  background-image: url(http://img.kaiyanapp.com/3a3c7d91d928303382fced649951387e.jpeg?imageMogr2/quality/60/format/jpg);
+`
+
+const Main = styled.div`
+  position: relative;
+  z-index: 10;
+`
 
 export default class Detail extends Component {
 
@@ -37,32 +64,32 @@ export default class Detail extends Component {
     const videoListInfo = this.props.videoState.get('videoListInfo')
     const replyListInfo = this.props.videoState.get('replyListInfo')
     return (
-        <div className="container">
+        <Container>
           {
             playVideoInfo.count() && 
-            <VideoPlayer url={playVideoInfo.get('playUrl')} />
+            <Player url={playVideoInfo.get('playUrl')} />
           }
-          <div className="video-info">
-            <Info videoInfo={playVideoInfo} />
-            <div className="divider" />
-            <div className="video-cover-blurred" />
-            {
+           <Main >
+            <PlayingInfo videoInfo={playVideoInfo} />
+            <Divider />
+            <Cover />
+             {
               videoListInfo.count() && 
-              <RelateVideo videoList={videoListInfo.get('videoList')} />
+              <RelateList videoList={videoListInfo.get('videoList')} />
             }
-            <div className="divider" />
+            <Divider />
             {
               replyListInfo.count() && 
               <ReplyList replyList={replyListInfo.get('replyList')} />
             }
-            <div className="divider" />
+            <Divider />
             {
               playVideoInfo.count() && 
               <Tag tags={playVideoInfo.get('tags')} />
-            }
-            <Footer />
-          </div>
-        </div>
+            } 
+             <Footer /> 
+          </Main> 
+        </Container>
     )
   }
 }
