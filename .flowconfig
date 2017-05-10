@@ -1,0 +1,20 @@
+[ignore]
+.*/node_modules/.*
+.*/build/.*
+.*/dist/.*
+[include]
+
+[libs]
+flow
+[options]
+module.name_mapper='\(ASSET\)' -> '<PROJECT_ROOT>/src/assets'
+module.name_mapper='\(COMPONENT\)' -> '<PROJECT_ROOT>/src/components'
+module.name_mapper='\(ACTION\)' -> '<PROJECT_ROOT>/src/redux/actions'
+module.name_mapper='\(REDUCER\)' -> '<PROJECT_ROOT>/src/redux/reducers'
+module.name_mapper='\(STORE\)' -> '<PROJECT_ROOT>/src/redux/store'
+module.name_mapper='\(ROUTE\)' -> '<PROJECT_ROOT>/src/routes'
+module.name_mapper='\(API\)' -> '<PROJECT_ROOT>/src/apis'
+module.name_mapper='\(UTIL\)' -> '<PROJECT_ROOT>/src/utils'
+module.name_mapper='\(MIXIN\)' -> '<PROJECT_ROOT>/src/utils/mixins'
+module.name_mapper='\(VIEW\)' -> '<PROJECT_ROOT>/src/views'
+module.name_mapper='\(CONST\)' -> '<PROJECT_ROOT>/src/redux/consts'
