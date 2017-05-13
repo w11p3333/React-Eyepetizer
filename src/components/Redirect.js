@@ -19,7 +19,8 @@ class Redirect extends Component {
       this.props.location.query.dest
     )
   }
-
+  
+  // 非实体组件需显式返回 null
   render () {
     // 非实体组件需显式返回 null
     return null
