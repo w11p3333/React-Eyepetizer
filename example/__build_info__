@@ -1,8 +1,8 @@
 Hash: 7386ed8d36189b17ba74
 Version: webpack 1.14.0
-Time: 34026ms
+Time: 44411ms
                                              Asset       Size  Chunks             Chunk Names
-                   bootstrap/css/bootstrap.min.css     123 kB          [emitted]  
+             bootstrap/css/bootstrap-theme.css.map    47.7 kB          [emitted]  
                                        0.0d0539.js     296 kB    0, 2  [emitted]  video
                                mainifest.9eaf71.js    1.23 kB       2  [emitted]  mainifest
                                   vendor.acff17.js     294 kB    3, 2  [emitted]  vendor
@@ -11,18 +11,18 @@ Time: 34026ms
                  bootstrap/css/bootstrap-theme.css    26.1 kB          [emitted]  
              bootstrap/css/bootstrap-theme.min.css    23.4 kB          [emitted]  
                        bootstrap/css/bootstrap.css     147 kB          [emitted]  
-             bootstrap/css/bootstrap-theme.css.map    47.7 kB          [emitted]  
-                   bootstrap/css/bootstrap.css.map     391 kB          [emitted]  
+                   bootstrap/css/bootstrap.min.css     123 kB          [emitted]  
+  bootstrap/fonts/glyphicons-halflings-regular.eot    20.1 kB          [emitted]  
                                        1.7eb135.js  281 bytes    1, 2  [emitted]  videoView
   bootstrap/fonts/glyphicons-halflings-regular.svg     109 kB          [emitted]  
   bootstrap/fonts/glyphicons-halflings-regular.ttf    45.4 kB          [emitted]  
-bootstrap/fonts/glyphicons-halflings-regular.woff2      18 kB          [emitted]  
  bootstrap/fonts/glyphicons-halflings-regular.woff    23.4 kB          [emitted]  
-  bootstrap/fonts/glyphicons-halflings-regular.eot    20.1 kB          [emitted]  
-                               bootstrap/js/npm.js  484 bytes          [emitted]  
+bootstrap/fonts/glyphicons-halflings-regular.woff2      18 kB          [emitted]  
                          bootstrap/js/bootstrap.js    68.9 kB          [emitted]  
                      bootstrap/js/bootstrap.min.js    36.8 kB          [emitted]  
+                               bootstrap/js/npm.js  484 bytes          [emitted]  
                                      jquery.min.js    84.3 kB          [emitted]  
+                   bootstrap/css/bootstrap.css.map     391 kB          [emitted]  
                                      ../index.html  825 bytes          [emitted]  
 chunk    {0} 0.0d0539.js (video) 663 kB {4} [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
