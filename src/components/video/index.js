@@ -66,7 +66,7 @@ export default class Detail extends Component {
     return (
         <Container>
           {
-            playVideoInfo.count() && 
+            !playVideoInfo.isEmpty() && 
             <Player url={playVideoInfo.get('playUrl')} />
           }
            <Main >
@@ -74,17 +74,17 @@ export default class Detail extends Component {
             <Divider />
             <Cover />
             {
-              videoListInfo.count() && 
+              !videoListInfo.isEmpty() && 
               <RelateList videoList={videoListInfo.get('videoList')} />
             }
             <Divider />
             {
-              replyListInfo.count() && 
+              !replyListInfo.isEmpty() && 
               <ReplyList replyList={replyListInfo.get('replyList')} />
             }
             <Divider />
             {
-              playVideoInfo.count() && 
+              !playVideoInfo.isEmpty() && 
               <Tag tags={playVideoInfo.get('tags')} />
             } 
              <Footer /> 

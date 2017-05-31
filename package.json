@@ -1,7 +1,7 @@
 {
-  "name": "react-demo",
-  "description": "A Simple Message Board Demo developed by React",
-  "author": "Ken Berkeley <kenberkeley@foxmail.com>",
+  "name": "react-eyepetizer",
+  "description": "A Simple react-eyepetizer App Demo developed by React",
+  "author": "AppleCatKay <applecatkay@gmail.com>",
   "version": "0.1.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node build/dev.js",
