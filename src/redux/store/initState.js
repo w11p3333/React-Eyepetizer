@@ -8,6 +8,8 @@ import {
 
 export default {
 
+  homeFeed: Map({}),
+
   playVideoInfo: Map({}),
 
   videoListInfo: Map({}),

@@ -34,3 +34,15 @@ export function injectReducer(key: string, reducer: Function) {
   asyncReducers[key] = reducer
   store.replaceReducer(createRootReducer()) // 替换当前的 rootReducer
 }
+
+/**
+ * @param  {initState}
+ * @param  {Object} handlers
+ * @return {Reducer}
+ */
+export function createReducer(initState: Object, handlers: Object): Function {
+  return function reducer(state = initState, action: Function) {
+    const handler = handlers[action.type]
+    return handler ? handler(state, action) : state
+  }
+}

@@ -1,17 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import { DefaultPlayer as Video } from 'react-html5video'
-import 'react-html5video/dist/styles.css'
+const MyVideo = styled.video`
+  height: 100%;
+  position: ${ props => props.position };
+`
 
-export default ({ url, controls }) => (
-    <Video 
-      autoPlay 
-      loop 
-      muted
-      controls={ controls }
-      onCanPlayThrough={() => {
-        // Do stuff
-      }}>
-      <source src={ url } type="video/webm" />
-    </Video>
-)
+class Video extends Component {
+
+  constructor (props) {
+    super(props)
+  }
+
+  render () {
+    const { url } = this.props
+    return (
+      <MyVideo 
+        { ...this.props } >
+        <source src={ url } />
+      </MyVideo>
+    )
+  }
+
+}
+
+Video.propTypes = {
+  url: PropTypes.string.isRequired,
+  muted: PropTypes.boolean,
+  loop: PropTypes.boolean,
+  controls: PropTypes.boolean,
+  autoPlay: PropTypes.boolean,
+  height: PropTypes.height,
+  width: PropTypes.width
+}
+
+export default Video
