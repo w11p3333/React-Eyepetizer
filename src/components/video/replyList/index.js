@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from 'COMPONENT/video/common/container'
+import Container from 'COMPONENT/common/container'
 import Header from 'COMPONENT/video/replyList/header'
 import Info from 'COMPONENT/video/replyList/info'
 import Avatar from 'COMPONENT/video/replyList/avatar'

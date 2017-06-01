@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Container from 'COMPONENT/video/common/container'
-import Divider from 'COMPONENT/video/common/divider'
+import Container from 'COMPONENT/common/container'
+import Divider from 'COMPONENT/common/divider'
 import Title from 'COMPONENT/video/tag/title'
 import List from 'COMPONENT/video/tag/list'
 import Text from 'COMPONENT/video/tag/text'

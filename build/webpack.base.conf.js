@@ -1,16 +1,16 @@
 var path = require('path'),
-  webpack = require('webpack'),
-  NyanProgressPlugin = require('nyan-progress-webpack-plugin');
+    webpack = require('webpack'),
+    NyanProgressPlugin = require('nyan-progress-webpack-plugin')
 
 var rootPath = path.resolve(__dirname, '..'), // 项目根目录
-  src = path.join(rootPath, 'src'), // 开发源码目录
-  env = process.env.NODE_ENV.trim(); // 当前环境
+    src = path.join(rootPath, 'src'), // 开发源码目录
+    env = process.env.NODE_ENV.trim() // 当前环境
 var commonPath = {
   rootPath: rootPath,
   dist: path.join(rootPath, 'dist'), // build 后输出目录
   indexHTML: path.join(src, 'index.html'), // 入口基页
-  staticDir: path.join(rootPath, 'static') // 无需处理的静态资源目录
-};
+  staticDir: path.join(rootPath, './static') // 无需处理的静态资源目录
+}
 
 module.exports = {
   commonPath: commonPath,
@@ -42,6 +42,7 @@ module.exports = {
       // ================================
       // 自定义路径别名
       // ================================
+      '@': path.join(src, ''),
       ASSET: path.join(src, 'assets'),
       COMPONENT: path.join(src, 'components'),
       ACTION: path.join(src, 'redux/actions'),
@@ -75,13 +76,13 @@ module.exports = {
               presets: ['react-optimize']
             }
           }
-        }), 'eslint'];
+        }), 'eslint']
 
         // 开发环境下引入 React Hot Loader
         if (env === 'development') {
-          _loaders.unshift('react-hot');
+          _loaders.unshift('react-hot')
         }
-        return _loaders;
+        return _loaders
       })(),
       include: src,
       exclude: /node_modules/
@@ -121,4 +122,4 @@ module.exports = {
       __WHY_DID_YOU_UPDATE__: false // 是否检测不必要的组件重渲染
     })
   ]
-};
+}

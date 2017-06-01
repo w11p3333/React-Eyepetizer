@@ -1,5 +1,5 @@
 import React from 'react'
-import Divider from 'COMPONENT/video/common/divider'
+import Divider from 'COMPONENT/common/divider'
 
 import Meta from 'COMPONENT/video/playingInfo/meta'
 import Title from 'COMPONENT/video/playingInfo/title'

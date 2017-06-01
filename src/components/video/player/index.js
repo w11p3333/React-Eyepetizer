@@ -1,21 +1,12 @@
 import React from 'react'
 
-import { DefaultPlayer as Video } from 'react-html5video'
-import 'react-html5video/dist/styles.css'
-
 import Container from 'COMPONENT/video/player/container'
+import Player from 'COMPONENT/common/player'
 
 export default ({ url }) => (
   <Container>
-    <Video 
-      autoPlay 
-      loop 
-      muted
-      controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
-      onCanPlayThrough={() => {
-        // Do stuff
-      }}>
-      <source src={url} type="video/webm" />
-    </Video>
+    <Player 
+      controls={ ['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen'] }
+      url={ url } />
   </Container>
 )

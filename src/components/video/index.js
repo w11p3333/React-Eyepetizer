@@ -7,7 +7,7 @@ import RelateList from 'COMPONENT/video/relateList'
 import ReplyList from 'COMPONENT/video/replyList'
 import Tag from 'COMPONENT/video/tag'
 import Footer from 'COMPONENT/video/footer'
-import Divider from 'COMPONENT/video/common/divider'
+import Divider from 'COMPONENT/common/divider'
 
 import styled from 'styled-components'
 
