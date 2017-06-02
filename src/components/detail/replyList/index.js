@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import Container from '@/components/common/container'
 import Title from '@/components/detail/common/title'
-import Section from '@/components/detail/replyList/section'
-import Avatar from '@/components/detail/replyList/avatar'
-import Article from '@/components/detail/replyList/article'
-import Name from '@/components/detail/replyList/name'
-import Time from '@/components/detail/replyList/time'
-import Reply from '@/components/detail/replyList/reply'
-import Hot from '@/components/detail/replyList/hot'
+import Section from './section'
+import Avatar from './avatar'
+import Article from './article'
+import Time from './time'
+import Hot from './hot'
+import Text from './text'
 
 class ReplyList extends Component {
 
@@ -24,11 +24,11 @@ class ReplyList extends Component {
           {
               replyList.map(reply =>
                   <Section>
-                    <Avatar style={ { backgroundImage: `url(${reply.get('user').get('avatar')})` } } />
+                    <Avatar src={ reply.get('user').get('avatar') } />
                     <Article>
-                      <Name data-uid={reply.get('user').get('uid')}>{reply.get('user').get('nickname')}</Name>
-                      <Time>{reply.get('time')}</Time>
-                      <Reply>{reply.get('message')}</Reply>
+                      <Text>{ reply.get('user').get('nickname') }</Text>
+                      <Time>{ reply.get('time') }</Time>
+                      <Text>{ reply.get('message') }</Text>
                       {
                           reply.get('hot') &&
                           <Hot>- Hot -</Hot>

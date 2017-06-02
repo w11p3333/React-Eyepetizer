@@ -1,7 +1,11 @@
 import styled from 'styled-components'
+
 export default styled.div`
-  padding: 0 37px 16px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  z-index: 1;
 `

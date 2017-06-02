@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Container from './container'
 import Title from './title'
-import Meta from '@/components/common/meta'
+import Meta from './meta'
 
 class MyTitle extends Component {
 
@@ -17,9 +17,6 @@ class MyTitle extends Component {
       <Container>
         <Title>{ title }</Title>
         <Meta 
-          fontSize="14px"
-          fontWeight="500"
-          color="white"
           category={ category } 
           time={ time } />
       </Container>

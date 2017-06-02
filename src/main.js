@@ -31,8 +31,8 @@ if (__PROD__) {
 const MOUNT_NODE = document.getElementById('app')
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={history} children={routes} />
+  <Provider store={ store }>
+    <Router history={ history } children={ routes } />
   </Provider>,
   MOUNT_NODE
 )

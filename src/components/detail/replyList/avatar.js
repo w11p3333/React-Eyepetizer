@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-export default styled.div`
-  background-position: 50%;
-  background-size: cover;
+
+const size = '36px'
+export default styled.img`
   border-radius: 50%;
   float: left;
-  height: 36px;
+  height: ${size};
   margin: 0 13px;
-  width: 36px;
+  width: ${size};
 `

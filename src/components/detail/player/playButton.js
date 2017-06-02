@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { detail } from '@/style'
+
+const size = '60px'
+
 export default styled.button`
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, .15);
-  background-image: url('//static.kaiyanapp.com/eyepetizer-web/assets/images/detail/icon_play@2x.3b9f9ba5.png');
+  background-image: url(${detail.videoPlayBtnImg});
   background-position: 50%;
-  background-size: 60px 60px;
+  background-size: ${size} ${size};
   background-repeat: no-repeat;
   cursor: pointer;
 

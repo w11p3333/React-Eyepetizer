@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import Player from '@/components/common/player'
 import PlayButton from './playButton'
 import Container from './container'
+
+const Video = styled(Player)`
+  position: absolute;
+`
 
 class MyPlayer extends Component {
 
@@ -17,8 +22,7 @@ class MyPlayer extends Component {
   render () {
     return (
       <Container onClick={ this.stopPlay.bind(this) }>
-        <Player
-        position="absolute"
+        <Video
         controls={ this.state.startPlay }
         url={ this.props.url } />
         {

@@ -6,7 +6,7 @@ import Sprite from '@/components/home/common/sprite'
 const Logo = styled(Sprite)`
   height: 225px;
   width: 180px;
-  top: 30%;
+  margin-top: 100px;
   background-position: 0 81.02435%;
 `
 

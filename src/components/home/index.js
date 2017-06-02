@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-// import { is } from 'immutable'
+import { 
+  is,
+  fromJS
+} from 'immutable'
 
 import Container from './container'
 import Banner from './banner'
@@ -19,8 +22,7 @@ export default class Index extends Component {
   }
 
   shouldComponentUpdate (nextProps) {
-    return true
-    // return !is(nextProps.homeFeed, this.props.homeFeed)
+    return !is(fromJS(nextProps), fromJS(this.props))
   }
 
   render () {

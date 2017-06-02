@@ -5,9 +5,7 @@ import styled from 'styled-components'
 import formatter from '@/utils/dateTimeFormatter'
 
 const Container = styled.p`
-  color: ${ props => props.color };
-  font-weight: ${ props => props.fontWeight };
-  font-size: ${ props => props.fontSize || '12px' };
+  font-size: 12px;
   opacity: .85;
 `
 

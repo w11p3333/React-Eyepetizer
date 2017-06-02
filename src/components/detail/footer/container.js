@@ -1,7 +1,10 @@
 import styled from 'styled-components'
-import { background } from '@/style'
 
 export default styled.footer`
-  background: ${background};
+  background: rgba(0, 0, 0, .4);
   padding: 40px 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `

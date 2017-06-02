@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
 import 'ASSET/scss/normalize.scss'
 
@@ -40,14 +40,34 @@ const Container = styled.div`
   color: #fff
 `
 
-export default ({ children, location }) => (
-  <div>
-    <Container>
-      { children }
-    </Container>
-    { 
-      DevTools && 
-      <DevTools />
+class App extends Component {
+
+  constructor (props) {
+    super(props)
+  }
+
+  componentDidUpdate(prevProps) {
+    // 每次路由时滚动到最顶部
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
     }
-  </div>
-)
+  }
+
+  render () {
+    const { children } = this.props
+    return (
+      <div>
+        <Container>
+          { children }
+        </Container>
+        {
+          DevTools && 
+          <DevTools />
+        }
+      </div>
+    )
+  }
+
+}
+
+export default App

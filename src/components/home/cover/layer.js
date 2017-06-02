@@ -6,10 +6,7 @@ export default styled.div`
   height: 450px;
   width: 100%;
   background: ${background};
-
-  transition-property: background;
-  transition-duration: .6s;
-  transition-timing-function: initial;
-  transition-delay: initial;
   position: absolute;
+
+  transition: background .6s initial initial;
 `
