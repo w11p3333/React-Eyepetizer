@@ -5,6 +5,7 @@ import {
   fromJS
 } from 'immutable'
 
+import Modal from '@/components/common/modal'
 import Container from './container'
 import Banner from './banner'
 import Divider from './divider'
@@ -15,6 +16,7 @@ export default class Index extends Component {
 
   constructor (props) {
     super(props)
+    console.log(this)
   }
 
   componentWillMount () {
@@ -26,14 +28,14 @@ export default class Index extends Component {
   }
 
   render () {
-    const feeds = this.props.homeFeed
+    const { homeFeed } = this.props
     return (
       <Container>
-        <Banner /> 
+        <Banner { ...this.props } /> 
         <Divider />
         {
-          !feeds.isEmpty() &&
-          feeds.map(item => (
+          !homeFeed.isEmpty() &&
+          homeFeed.map(item => (
             <Link to={ `/detail/${ item.get('id') }` }>
               <Cover 
               cover={ item.get('coverForFeed') } 
@@ -43,7 +45,8 @@ export default class Index extends Component {
             </Link>
           ))
         }
-        <Footer />
+        <Footer { ...this.props } />
+        <Modal { ...this.props } />
       </Container>
     )
   }

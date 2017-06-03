@@ -4,6 +4,7 @@
 // home
 // ================================
 export const FETCH_HOME_FEED = 'FETCH_HOME_FEED'
+export const SET_PLATFORM = 'SET_PLATFORM'
 
 // ================================
 // video

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mediaQuery } from '@/style'
 import Sprite from '@/components/home/common/sprite'
 
 export default styled(Sprite)`
@@ -12,4 +13,8 @@ export default styled(Sprite)`
   cursor: pointer;
   background-position: 0 0;
   font-size: 14px;
+
+  ${mediaQuery} {
+    display: none;
+  }
 `

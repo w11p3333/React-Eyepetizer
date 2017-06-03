@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export default styled.main`
   height: 100%;
+  overflow: hidden;
   background-color: white;
   font-family: Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 13px;

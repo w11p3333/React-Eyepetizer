@@ -17,9 +17,9 @@ const Android = styled(Button)`
   background-position: 0 14.3136%;
 `
 
-export default _ => (
+export default ({ setPlatform }) => (
   <Container>
-    <IOS />
-    <Android />
+    <IOS onClick={ _ => setPlatform('iOS') } />
+    <Android onClick={ _ => setPlatform('Android') } />
   </Container>
 )

@@ -10,6 +10,8 @@ export default {
 
   homeFeed: Map({}),
 
+  platform: '',
+
   playVideoInfo: Map({}),
 
   videoListInfo: Map({}),

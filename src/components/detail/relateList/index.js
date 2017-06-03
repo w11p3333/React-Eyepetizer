@@ -23,7 +23,7 @@ class RelateList extends Component {
           videoList.map(video => (
             <Link to={ { pathname: `/detail/${video.get('id')}` } }>
               <Section>
-                <Figure style={ { backgroundImage: `url(${video.get('coverForDetail')})` } } />
+                <Figure src={ video.get('coverForDetail') } />
                 <Figcaption>
                   <Title>{video.get('title')}</Title>
                   <Meta category={ video.get('category') } time={ video.get('duration') } /> 

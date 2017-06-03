@@ -3,7 +3,8 @@ import { fromJS } from 'immutable'
 import initState from '@/redux/store/initState'
 import { createReducer } from './index'
 import {
-  FETCH_HOME_FEED
+  FETCH_HOME_FEED,
+  SET_PLATFORM
 } from '../consts'
 
 const homeFeed = createReducer(initState.homeFeed, {
@@ -14,8 +15,13 @@ const homeFeed = createReducer(initState.homeFeed, {
   }
 })
 
+const platform = createReducer(initState.platform, {
+  [SET_PLATFORM]: (state, { payload }) => payload
+})
+
 export default {
-  homeFeed
+  homeFeed,
+  platform
 }
 
 // export default function (state = initState.homeFeed, { type, payload }) {

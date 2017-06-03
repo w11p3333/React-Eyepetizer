@@ -1,12 +1,16 @@
 import React from 'react'
 
 import Container from './container'
-import Player from './player'
+import Menu from './menu'
 import Content from './content'
+import Player from './player'
+import Album from './album'
 
-export default _ => (
+export default props => (
   <Container>
-    <Content />
+    <Menu { ...props } />
+    <Content { ...props } />
     <Player />
+    <Album />
   </Container>
 )

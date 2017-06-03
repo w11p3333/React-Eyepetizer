@@ -25,7 +25,7 @@ export default {
         })
         // 生成container
         const homeContainer = connect(
-          ({ homeFeed }) => ({ homeFeed }),
+          ({ homeFeed, platform }) => ({ homeFeed, platform }),
           homeActions
         )(homeView)
 

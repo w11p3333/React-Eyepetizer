@@ -1,18 +1,16 @@
 import React from 'react'
 
 import Container from './container'
-import Menu from './menu'
 import Logo from './logo'
 import Intro from './intro'
 import Popularize from './popularize'
 import Entry from './entry/'
 
-export default _ => (
+export default props => (
   <Container>
-    <Menu />
     <Logo />
     <Intro />
-    <Popularize />
+    <Popularize { ...props } />
     <Entry />
   </Container>
 )

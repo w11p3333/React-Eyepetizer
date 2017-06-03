@@ -8,4 +8,5 @@ export default styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
 `

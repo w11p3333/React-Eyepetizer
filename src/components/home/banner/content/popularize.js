@@ -1,18 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { mediaQuery } from '@/style'
 import Sprite from '@/components/home/common/sprite'
+
+const size = 52
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  
+  ${mediaQuery} {
+    height: ${size * 2.5 }px;
+    flex-direction: column;
+  }
 `
 
 const Button = styled(Sprite)`
-  height: 52px;
+  height: ${size}px;
   width: 163px;
   opacity: .9;
+
 `
 
 const IOS = styled(Button)`
@@ -23,9 +32,9 @@ const Android = styled(Button)`
   background-position: 0 7.22186%;
 `
 
-export default _ => (
+export default ({ setPlatform }) => (
   <Container>
-    <IOS />
-    <Android />
+    <IOS onClick={ _ => setPlatform('iOS') } />
+    <Android onClick={ _ => setPlatform('Android') } />
   </Container>
 )

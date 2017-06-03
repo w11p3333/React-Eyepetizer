@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mediaQuery } from '@/style'
 
 export default styled.div`
   width: 428px;
@@ -7,4 +8,8 @@ export default styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${mediaQuery} {
+    flex-direction: column;
+  }
 `

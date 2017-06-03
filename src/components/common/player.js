@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const MyVideo = styled.video`
   height: 100%;
-  position: ${ props => props.position };
+  width: 100%;
 `
 
 class Video extends Component {

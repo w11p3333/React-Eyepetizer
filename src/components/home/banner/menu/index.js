@@ -27,7 +27,7 @@ export default class Menu extends Component {
   render () {
     return (
       <Container>
-        <WeChat />
+        <WeChat onClick={ _ => this.props.setPlatform('WeChat') } />
         <Weibo onClick={ this.pushToWeibo } />
         <Email onClick={ this.pushToEmail } />
       </Container>

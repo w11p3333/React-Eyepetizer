@@ -1,12 +1,16 @@
-import React from 'react'
 import styled from 'styled-components'
+import { mediaQuery } from '@/style'
 const size = 100
 
 export default styled.div`
   height: ${size}%;
   width: ${size}%;
-  background: rgba(0, 0, 0, .4);
+  z-index: -1;
   position: absolute;
+  display: none;
 
-  transition: background .6s initial initial;
+  ${mediaQuery} {
+    display: block;
+  }
+
 `
