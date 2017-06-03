@@ -3,8 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
-import store, { history } from 'STORE'
-import routes from 'ROUTE'
+import store, { history } from '@/redux/store'
+import routes from '@/routes'
 
 /**
  * 下面这货用于检测不必要的重新渲染，详情请看其项目地址：
@@ -17,12 +17,6 @@ import routes from 'ROUTE'
 if (__DEV__ && __WHY_DID_YOU_UPDATE__) {
   const { whyDidYouUpdate } = require('why-did-you-update')
   whyDidYouUpdate(React)
-}
-if (__DEV__) {
-  console.info('[当前环境] 开发环境')
-}
-if (__PROD__) {
-  console.info('[当前环境] 生产环境')
 }
 
 // ================================
@@ -54,6 +48,6 @@ ReactDOM.render(
  *  }
  *  
  *  但上面这种官方的做法实在太麻烦，于是我们有更为直接的方式：
- *  import store from 'STORE'
+ *  import store from '@/redux/store'
  *  store.getState() // 只读，更改 state 只能通过 dispatch
 */

@@ -1,7 +1,7 @@
 // @flow
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-import store from 'STORE'
+import store from '@/redux/store'
 
 // ================================
 // 同步的 Reducers（即应用初始化所必需的）

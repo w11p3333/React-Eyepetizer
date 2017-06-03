@@ -1,6 +1,6 @@
 // @flow
 import { applyMiddleware, compose, createStore } from 'redux'
-import { createRootReducer } from 'REDUCER'
+import { createRootReducer } from '@/redux/reducers'
 import middlewares from './middlewares'
 import enhancers from './enhancers'
 import syncHistoryWithStore from './syncHistoryWithStore'
@@ -18,7 +18,5 @@ const store = createStore(
 )
 export default store
 
-// ======================================================
-// 增强版 history
-// ======================================================
+// 添加router
 export const history = syncHistoryWithStore(store)

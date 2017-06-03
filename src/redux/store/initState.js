@@ -8,14 +8,23 @@ import {
 
 export default {
 
+  // home
+
+  // 首页数据流
   homeFeed: Map({}),
 
+  // 平台推广
   platform: '',
 
+  // detail
+
+  // 播放的视频信息
   playVideoInfo: Map({}),
 
+  // 视频列表信息
   videoListInfo: Map({}),
 
+  // 回复列表信息
   replyListInfo: Map({})
 
 }

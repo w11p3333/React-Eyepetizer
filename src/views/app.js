@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
-import 'ASSET/scss/normalize.scss'
+import '@/assets/scss/normalize.scss'
 
 let DevTools
 if (__DEV__ && __COMPONENT_DEVTOOLS__) {
@@ -10,12 +10,6 @@ if (__DEV__ && __COMPONENT_DEVTOOLS__) {
 
 injectGlobal`
   body, html{
-   background:
-    radial-gradient(
-      ellipse at center,
-      rgba(51, 51, 51, 1) 0%,
-      rgba(17, 17, 17, .75) 100%
-    );
     background-color: rgba(51, 51, 51, 1);
     background-position: center;
     font-family: Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Helvetica Neue,Helvetica,Arial,sans-serif;

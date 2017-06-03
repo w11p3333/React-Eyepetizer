@@ -33,3 +33,7 @@ declare module 'history/lib/createBrowserHistory' {
 declare module 'moment' {
   declare module.exports: any;
 }
+
+declare module 'styled-components' {
+  declare module.exports: any;
+}

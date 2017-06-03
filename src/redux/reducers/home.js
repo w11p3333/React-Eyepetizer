@@ -23,7 +23,7 @@ export default {
   homeFeed,
   platform
 }
-
+// 等同于下面这段
 // export default function (state = initState.homeFeed, { type, payload }) {
 
 //   switch (type) {

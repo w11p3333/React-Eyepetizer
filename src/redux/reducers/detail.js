@@ -5,7 +5,7 @@ import {
   FETCH_VIDEO_INFO,
   FETCH_REPLY_LIST,
   FETCH_VIDEO_LIST
-} from 'CONST'
+} from '@/redux/consts'
 import initState from '@/redux/store/initState'
 import { createReducer } from './index'
 
@@ -42,23 +42,3 @@ export default {
   videoListInfo,
   replyListInfo
 }
-
-// export default function (state, { type, payload }) {
-
-//   switch (type) {
-
-//     case FETCH_VIDEO_INFO:
-//       return reducerVideoInfo(payload)
-
-//     case FETCH_REPLY_LIST:
-//       return reducerReplyList(payload)
-
-//     case FETCH_VIDEO_LIST:
-//       return reducerVideoList(payload)
-
-//     default:
-//       return state
-
-//   }
-
-// }

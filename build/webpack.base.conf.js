@@ -42,19 +42,7 @@ module.exports = {
       // ================================
       // 自定义路径别名
       // ================================
-      '@': path.join(src, ''),
-      ASSET: path.join(src, 'assets'),
-      COMPONENT: path.join(src, 'components'),
-      ACTION: path.join(src, 'redux/actions'),
-      REDUCER: path.join(src, 'redux/reducers'),
-      STORE: path.join(src, 'redux/store'),
-      ROUTE: path.join(src, 'routes'),
-      API: path.join(src, 'apis'),
-      UTIL: path.join(src, 'utils'),
-      HOC: path.join(src, 'utils/HoC'),
-      MIXIN: path.join(src, 'utils/mixins'),
-      VIEW: path.join(src, 'views'),
-      CONST: path.join(src, 'redux/consts')
+      '@': path.join(src, '')
     }
   },
   resolveLoader: {
