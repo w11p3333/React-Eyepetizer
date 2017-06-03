@@ -2,24 +2,24 @@
 import { fromJS } from 'immutable'
 import moment from 'moment'
 import { 
-  FETCH_VIDEO_INFO,
-  FETCH_REPLY_LIST,
-  FETCH_VIDEO_LIST
+  SET_VIDEO_INFO,
+  SET_REPLY_LIST,
+  SET_VIDEO_LIST
 } from '@/redux/consts'
 import initState from '@/redux/store/initState'
 import { createReducer } from './index'
 
 // 导出名字与state名字相同
 export const playVideoInfo = createReducer(initState.playVideoInfo, {
-  [FETCH_VIDEO_INFO]: (state, { payload }) => fromJS(payload)
+  [SET_VIDEO_INFO]: (state, { payload }) => fromJS(payload)
 })
 
 export const videoListInfo = createReducer(initState.videoListInfo, {
-  [FETCH_VIDEO_LIST]: (state, { payload }) => fromJS(payload)
+  [SET_VIDEO_LIST]: (state, { payload }) => fromJS(payload)
 })
 
 export const replyListInfo = createReducer(initState.replyListInfo, {
-  [FETCH_REPLY_LIST]: (state, { payload }) => {
+  [SET_REPLY_LIST]: (state, { payload }) => {
     const { count, nextPageUrl, replyList, total } = payload
     replyList.map((reply, index) => {
       reply.time = moment(reply.createTime).format('YYYY-MM-DD HH:m')

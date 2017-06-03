@@ -5,6 +5,8 @@ import middlewares from './middlewares'
 import enhancers from './enhancers'
 import syncHistoryWithStore from './syncHistoryWithStore'
 
+import { sagaMiddleware } from './middlewares'
+import rootSaga from '../sagas'
 // ======================================================
 // 实例化 Store
 // ======================================================
@@ -16,6 +18,7 @@ const store = createStore(
     ...enhancers
   )
 )
+sagaMiddleware.run(rootSaga)
 export default store
 
 // 添加router

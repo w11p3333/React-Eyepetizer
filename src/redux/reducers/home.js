@@ -3,12 +3,12 @@ import { fromJS } from 'immutable'
 import initState from '@/redux/store/initState'
 import { createReducer } from './index'
 import {
-  FETCH_HOME_FEED,
+  SET_HOME_FEED,
   SET_PLATFORM
 } from '../consts'
 
 const homeFeed = createReducer(initState.homeFeed, {
-  [FETCH_HOME_FEED]: (state, { payload }) => {
+  [SET_HOME_FEED]: (state, { payload }) => {
     const [ daily ] = payload.dailyList
     const { videoList } = daily
     return fromJS(videoList)

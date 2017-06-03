@@ -24,9 +24,7 @@ export default class Detail extends Component {
     const ID = this.props.params.id
     if (!ID) this.context.router.push('/')
     else {
-      this.props.fetchVideoInfo(ID)
-      this.props.fetchReplyList(ID)
-      this.props.fetchVideoList(ID)
+      this.props.fetchDetailFeed(ID)
     }
   }
 

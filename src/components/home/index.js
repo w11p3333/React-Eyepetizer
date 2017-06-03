@@ -5,6 +5,10 @@ import {
   fromJS
 } from 'immutable'
 
+// import {
+//   fetchHomeFeed
+// } from '@/redux/sagas/home'
+
 import Modal from '@/components/common/modal'
 import Container from './container'
 import Banner from './banner'
@@ -16,11 +20,11 @@ export default class Index extends Component {
 
   constructor (props) {
     super(props)
-    console.log(this)
   }
 
   componentWillMount () {
     this.props.fetchHomeFeed()
+    // this.props.dispatch(fetchHomeFeed)
   }
 
   shouldComponentUpdate (nextProps) {
