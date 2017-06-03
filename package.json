@@ -19,6 +19,7 @@
     "lodash": "^4.15.0",
     "moment": "^2.18.0",
     "node-sass": "^4.5.2",
+    "normalizr": "^3.2.3",
     "querystring": "^0.2.0",
     "react": "~15.3.1",
     "react-dom": "~15.3.1",
@@ -27,7 +28,7 @@
     "react-router": "^2.7.0",
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0",
+    "redux-saga": "^0.15.3",
     "styled-components": "2.0.0"
   },
   "devDependencies": {
