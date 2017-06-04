@@ -35,7 +35,7 @@ export default class Menu extends Component {
   }
 
   pushToWeibo () {
-    window.open('http://weibo.com/eyepetizer')
+    window.open('//weibo.com/eyepetizer')
   }
 
   pushToEmail () {

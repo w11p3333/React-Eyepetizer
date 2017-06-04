@@ -14,7 +14,7 @@ class Entry extends Component {
   }
 
   pushToBackground () {
-    window.open('http://open.eyepetizer.net/#!/landing')
+    window.open('//open.eyepetizer.net/#!/landing')
   }
 
 }
