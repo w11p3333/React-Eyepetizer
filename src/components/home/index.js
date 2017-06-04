@@ -5,8 +5,9 @@ import {
   fromJS
 } from 'immutable'
 import moment from 'moment'
+import { mediaSize } from '@/style'
 
-import { isMobile } from '@/utils'
+// import { isMobile } from '@/utils'
 
 import Container from './container'
 // banner
@@ -38,7 +39,7 @@ export default class Index extends Component {
       today: `- ${today} -`,
       platform: null,
       videoUrl: 'http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4',
-      isShowVideo: !isMobile()
+      isShowVideo: this.isShowVideo() // mount并不会触发resize
     }
     this.handlerPlatform = this.handlerPlatform.bind(this)
   }
@@ -50,9 +51,9 @@ export default class Index extends Component {
   componentDidMount () {
     window.onresize = _ => {
       // 调试时响应式切换
-      this.setState({
-        isShowVideo: !isMobile()
-      })
+        this.setState({
+          isShowVideo: this.isShowVideo()
+        })
     }
   }
 
@@ -72,7 +73,7 @@ export default class Index extends Component {
           {
             this.state.isShowVideo
             ? <BannerPlayer url={ this.state.videoUrl } />
-            : <BannerAlbum />
+            : <BannerAlbum id="test" />
           }
         </Banner>
 
@@ -128,6 +129,10 @@ export default class Index extends Component {
         break
 
     }
+  }
+
+  isShowVideo () {
+    return !(document.body.clientWidth <= mediaSize)
   }
 
 }

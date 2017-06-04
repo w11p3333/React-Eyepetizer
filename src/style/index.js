@@ -1,7 +1,8 @@
 export const border = '1px solid white'
 export const background = 'rgba(0, 0, 0, .4)'
 // global
-export const mediaQuery = '@media screen and (max-width: 1024px)'
+export const mediaSize = 1024
+export const mediaQuery = `@media screen and (max-width: ${mediaSize}px)`
 // detail
 export const detail = {
   border: '1px solid white',

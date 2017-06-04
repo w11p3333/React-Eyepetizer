@@ -1,10 +1,6 @@
 // @flow
 import moment from 'moment'
 
-export function isMobile () {
-  return (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) 
-}
-
 export function dateFormatter (milliseconds: number): string {
   const durationObj = moment.duration(milliseconds)
   const minutes = durationObj.minutes()
