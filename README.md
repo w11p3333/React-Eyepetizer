@@ -1,7 +1,6 @@
 
 <p align="center">
-<img width="100"src="https://facebook.github.io/react/img/logo.svg">
-<img width="100" height="100" src="http://7xtc17.com1.z0.glb.clouddn.com/eye.jpg" />
+<img width="300" src="http://upload-images.jianshu.io/upload_images/1449048-c24f9c7cc780da4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
 </p>
 
 <p align="center">
@@ -15,7 +14,7 @@
 
 ## Intro
 
-a simple react demo simulate `PWA` [eyeptizer website](http://www.kaiyanapp.com/) by using [Redux](https://github.com/reactjs/redux) + [Redux-saga](https://github.com/redux-saga/redux-saga) + [styled-components](https://github.com/styled-components/styled-components) + [immutable.js](https://github.com/facebook/immutable-js) + [Flow](https://github.com/facebook/flow)
+a simple react demo simulate `Responsive/PWA` [eyeptizer website](http://www.kaiyanapp.com/) by using [Redux](https://github.com/reactjs/redux) + [Redux-saga](https://github.com/redux-saga/redux-saga) + [styled-components](https://github.com/styled-components/styled-components) + [immutable.js](https://github.com/facebook/immutable-js) + [Flow](https://github.com/facebook/flow)
 
 ## Preview
 
