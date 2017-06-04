@@ -6,6 +6,8 @@ import {
 } from 'immutable'
 import moment from 'moment'
 
+import { isMobile } from '@/utils'
+
 import Container from './container'
 // banner
 import Banner from './banner/container'
@@ -35,13 +37,23 @@ export default class Index extends Component {
     this.state = {
       today: `- ${today} -`,
       platform: null,
-      videoUrl: 'http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4'
+      videoUrl: 'http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4',
+      isShowVideo: !isMobile()
     }
     this.handlerPlatform = this.handlerPlatform.bind(this)
   }
 
   componentWillMount () {
     this.props.fetchHomeFeed()
+  }
+
+  componentDidMount () {
+    window.onresize = _ => {
+      // 调试时响应式切换
+      this.setState({
+        isShowVideo: !isMobile()
+      })
+    }
   }
 
   shouldComponentUpdate (nextProps, nextState) {
@@ -57,8 +69,11 @@ export default class Index extends Component {
         <Banner>
           <BannerMenu clickHandler={ this.handlerPlatform } />
           <BannerContent clickHandler={ this.handlerPlatform } />
-          <BannerPlayer url={ this.state.videoUrl } />
-          <BannerAlbum />
+          {
+            this.state.isShowVideo
+            ? <BannerPlayer url={ this.state.videoUrl } />
+            : <BannerAlbum />
+          }
         </Banner>
 
         <Divider text={ this.state.today } />

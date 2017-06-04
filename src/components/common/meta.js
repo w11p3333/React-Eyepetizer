@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import formatter from '@/utils/dateTimeFormatter'
+import { dateFormatter } from '@/utils'
 
 const Container = styled.p`
   font-size: 12px;
@@ -11,7 +11,7 @@ const Container = styled.p`
 
 const Meta = ({ category, time }) => (
   <Container>
-    # { category } / { formatter(time * 1000) } 
+    # { category } / { dateFormatter(time * 1000) } 
   </Container>
 )
 
