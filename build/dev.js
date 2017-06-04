@@ -1,29 +1,27 @@
-var express = require('express'),
-  webpack = require('webpack'),
+const express = require('express')
+const webpack = require('webpack')
+const config = require('./config')
+const base = require('./webpack.base.conf')
   // favicon = require('express-favicon'),
-  config = require('./webpack.dev.conf'),
-  app = express();
+const devConfig = require('./webpack.dev.conf')
+const app = express()
 
-var compiler = webpack(config);
-
+var compiler = webpack(devConfig)
 // for highly stable resources
-app.use('/static', express.static(config.commonPath.staticDir));
+app.use('/static', express.static(config.dev.staticPath))
 
-// app.use(favicon(path.join(__dirname, '../favicon.ico')));
+// app.use(favicon(path.join(__dirname, '../favicon.ico')))
 
 // handle fallback for HTML5 history API
-app.use(require('connect-history-api-fallback')());
-
+app.use(require('connect-history-api-fallback')())
 // serve webpack bundle output
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
-  publicPath: config.output.publicPath
-}));
+  publicPath: config.dev.assetsPublicPath
+}))
 
-// enable hot-reload and state-preserving
-// compilation error display
 app.use(require('webpack-hot-middleware')(compiler));
 
 app.listen(9000, '127.0.0.1', function(err) {
   err && console.log(err);
-});
+})

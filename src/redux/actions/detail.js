@@ -7,7 +7,7 @@ import {
 // Action Creator
 // ================================
 
-const fetchDetailFeed = id => ({
+const fetchDetailFeed = (id: number) => ({
   type: FETCH_DETAIL_FEED,
   payload: id
 })

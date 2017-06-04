@@ -6,7 +6,7 @@ import {
 import * as homeSagas from './home'
 import * as detailSagas from './detail'
 
-function forkSagas (obj) {
+function forkSagas (obj: Object): Array {
   const forkArr = []
   Object.keys(obj).map(key => {
     forkArr.push(fork(obj[key]))
@@ -14,8 +14,8 @@ function forkSagas (obj) {
   return forkArr
 }
 
-export default function * rootSaga() {
-    yield [ 
+export default function * rootSaga(): void {
+    yield [
       ...forkSagas(homeSagas),
       ...forkSagas(detailSagas)
       ]

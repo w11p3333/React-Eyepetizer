@@ -10,7 +10,7 @@ import {
   SET_HOME_FEED
 } from '../consts'
 
-export function * fetchHomeFeed () {
+export function * fetchHomeFeed (): void {
   yield take(FETCH_HOME_FEED)
   const { data } = yield call(homeService.fetchHomeFeed)
   yield put({

@@ -5,9 +5,10 @@ import '@/assets/scss/normalize.scss'
 let DevTools
 if (__DEV__ && __COMPONENT_DEVTOOLS__) {
   // 组件形式的 Redux DevTools
-  DevTools = require('COMPONENT/DevTools').default
+  DevTools = require('@/components/common/devTools').default
 }
 
+// 注入全局样式
 injectGlobal`
   body, html{
     background-color: rgba(51, 51, 51, 1);

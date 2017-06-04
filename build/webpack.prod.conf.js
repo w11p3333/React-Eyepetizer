@@ -1,63 +1,84 @@
-var webpack = require('webpack'),
-  config = require('./webpack.base.conf'),
-  HtmlWebpackPlugin = require('html-webpack-plugin'),
-  CopyWebpackPlugin = require('copy-webpack-plugin'),
-  CleanWebpackPlugin = require('clean-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin'),
-  SOURCE_MAP = false;
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const path = require('path')
+const config = require('./config')
+const baseConfig = require('./webpack.base.conf')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 
-config.output.filename = '[name].[chunkhash:6].js';
-config.output.chunkFilename = '[id].[chunkhash:6].js';
+module.exports = merge(baseConfig, {
 
-config.devtool = SOURCE_MAP ? 'source-map' : false;
+  devtool: config.build.cssSourceMap ? 'eval-source-map' : false,
 
-// 生产环境下分离出 CSS 文件
-config.module.loaders.push({
-  test: /\.css$/,
-  loader: ExtractTextPlugin.extract('style', 'css')
-}, {
-  test: /\.less$/,
-  loader: ExtractTextPlugin.extract('style', 'css!less')
-}, {
-  test: /\.scss$/,
-  loader: ExtractTextPlugin.extract('style', 'css!sass')
-});
+  output: {
+    path: config.build.distPath,
+    publicPath: config.build.assetsPublicPath,
+    filename: 'js/[name].[chunkhash].js',
+    chunkFilename: 'js/[id].[chunkhash].js'
+  },
 
-config.plugins.push(
-  new CleanWebpackPlugin('dist', {
-    root: config.commonPath.rootPath,
-    verbose: false
-  }),
-  new CopyWebpackPlugin([ // 复制高度静态资源
+  // 生产环境分离css
+  loaders: [
     {
-      context: config.commonPath.staticDir,
-      from: '**/*',
-      ignore: ['*.md']
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract('style', 'css')
+    },
+    {
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract('style', 'css!sass')
     }
-  ]),
-  new webpack.optimize.DedupePlugin(),
-  new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    }
-  }),
-  new webpack.optimize.OccurenceOrderPlugin(),
-  new webpack.optimize.CommonsChunkPlugin({
-    // 公共代码分离打包
-    names: ['vendor', 'mainifest']
-  }),
-  new webpack.optimize.AggressiveMergingPlugin(),
-  new webpack.optimize.MinChunkSizePlugin({
-    minChunkSize: 30000
-  }),
-  new ExtractTextPlugin('[name].[contenthash:6].css', {
-    allChunks : true // 若要按需加载 CSS 则请注释掉该行
-  }),
-  new HtmlWebpackPlugin({
-    filename: '../index.html',
-    template: config.commonPath.indexHTML,
-    chunksSortMode: 'none'
-  })
-);
+  ],
 
-module.exports = config;
+  plugins: [
+    new CleanWebpackPlugin('dist', {
+      root: config.build.distPath,
+      verbose: false
+    }),
+    new CopyWebpackPlugin([ // 复制高度静态资源
+      {
+        context: config.build.assetsSubDirectory,
+        from: '**/*',
+        ignore: ['*.md']
+      }
+    ]),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module, count) {
+        // any required modules inside node_modules are extracted to vendor
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../node_modules')
+          ) === 0
+        )
+      }
+    }),
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.optimize.MinChunkSizePlugin({
+      minChunkSize: 30000
+    }),
+    // extract css into its own file
+    new ExtractTextPlugin({
+      filename: 'css/[name].[contenthash].css'
+    }),
+    new SWPrecachePlugin({
+      cacheId: 'react-eyepetizer',
+      filename: 'service-worker.js',
+      dontCacheBustUrlsMatching: /./,
+      staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
+      runtimeCaching: [
+      ]
+    })
+  ]
+
+})

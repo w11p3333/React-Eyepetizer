@@ -1,15 +1,16 @@
-var fs = require('fs'),
-  path = require('path'),
-  webpack = require('webpack'),
-  config = require('./webpack.prod.conf');
+const fs = require('fs')
+const path = require('path')
+const webpack = require('webpack')
+const config = require('./config')
+const prodConfig = require('./webpack.prod.conf')
 
-webpack(config, function(err, stats) {
+webpack(prodConfig, (err, stats) => {
   // show build info to console
-  console.log( stats.toString({ chunks: false, color: true }) );
+  console.log(stats.toString({ chunks: false, color: true }) )
 
   // save build info to file
   fs.writeFile(
-    path.join(config.commonPath.dist, '__build_info__'),
+    path.join(config.build.distPath, '__build_info__'),
     stats.toString({ color: false })
-  );
-});
+  )
+})

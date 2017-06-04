@@ -12,7 +12,7 @@ const fetchHomeFeed = _ => ({
   type: FETCH_HOME_FEED
 })
 
-const setPlatform = platform => ({
+const setPlatform = (platform: string) => ({
     type: SET_PLATFORM,
     payload: platform
 })

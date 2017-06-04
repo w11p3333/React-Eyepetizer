@@ -12,7 +12,7 @@ import {
   SET_REPLY_LIST
 } from '../consts'
 
-function * fetchDetail (id) {
+function * fetchDetail (id: number): void {
   const videoInfo = yield call(detailService.fetchVideoInfo, id)
   yield put({
     type: SET_VIDEO_INFO,
@@ -30,7 +30,7 @@ function * fetchDetail (id) {
   })
 }
 
-export function * watchFetchDetail () {
+export function * watchFetchDetail (): void {
   while (true) {
     const { payload } = yield take(FETCH_DETAIL_FEED)
     yield call(fetchDetail, payload)

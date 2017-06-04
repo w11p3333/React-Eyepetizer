@@ -30,6 +30,10 @@ ReactDOM.render(
   </Provider>,
   MOUNT_NODE
 )
+// 生产环境下注册service-worker
+if (__PROD__ && 'serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+}
 
 /**
  * 【拓展】
