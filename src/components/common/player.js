@@ -7,13 +7,9 @@ const MyVideo = styled.video`
   width: 100%;
 `
 
-const Video = ({ url, muted, loop, controls, autoPlay }) => (
-  <MyVideo 
-    muted={ muted }
-    loop={ loop }
-    controls={ controls }
-    autoPlay={ autoPlay }>
-    <source src={ url } />
+const Video = props => (
+  <MyVideo { ...props }>
+    <source src={ props.url } />
   </MyVideo>
 )
 

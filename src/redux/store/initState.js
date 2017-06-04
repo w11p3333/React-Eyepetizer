@@ -1,21 +1,30 @@
 // @flow
+import type {
+  HOME_FEED,
+  PLAY_VIDEO_INFO,
+  VIDEO_LIST_INFO,
+  REPLY_LIST_INFO
+} from '@/type'
 
-export default {
+type INIT_STATE = {
+  homeFeed: HOME_FEED, // 首页数据流
+  playVideoInfo: PLAY_VIDEO_INFO, // 播放的视频信息
+  videoListInfo: VIDEO_LIST_INFO, // 视频列表信息
+  replyListInfo: REPLY_LIST_INFO // 回复列表信息
+}
+
+const initState: INIT_STATE = {
 
   // home
-
-  // 首页数据流
   homeFeed: null,
 
   // detail
-
-  // 播放的视频信息
   playVideoInfo: null,
 
-  // 视频列表信息
   videoListInfo: null,
 
-  // 回复列表信息
   replyListInfo: null
 
 }
+
+export default initState

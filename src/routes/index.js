@@ -15,7 +15,7 @@ export default {
   component: app,
 
   indexRoute: {
-    getComponent (nextState, cb) {
+    getComponent (nextState: Object, cb: Function) {
         // 注入 Reducer
       Object.keys(reducers).map(key => {
         injectReducer(key, reducers[key])

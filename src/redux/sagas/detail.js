@@ -14,7 +14,7 @@ import {
   SET_REPLY_LIST
 } from '../consts'
 
-function * fetchVideoInfo (id: number): void {
+function * fetchVideoInfo (id: number): any {
   let videoInfo = yield select(state => state.playVideoInfo)
   console.log(videoInfo, '从store获取')
   if (videoInfo) {
@@ -28,7 +28,7 @@ function * fetchVideoInfo (id: number): void {
   })
 }
 
-function * fetchVideoList (id: number): void {
+function * fetchVideoList (id: number): any {
   let videoList = yield select(state => state.videoListInfo)
   console.log(videoList, '从store获取')
   if (videoList) {
@@ -42,7 +42,7 @@ function * fetchVideoList (id: number): void {
   })
 }
 
-function * fetchReplyList (id: number): void {
+function * fetchReplyList (id: number): any {
   let replyList = yield select(state => state.replyListInfo)
   console.log(replyList, '从store获取')
   if (replyList) {
@@ -56,7 +56,7 @@ function * fetchReplyList (id: number): void {
   })
 }
 
-export function * watchFetchDetail (): void {
+export function * watchFetchDetail (): any {
   while (true) {
     const { payload: id } = yield take(FETCH_DETAIL_FEED)
     yield fork(fetchVideoInfo, id)

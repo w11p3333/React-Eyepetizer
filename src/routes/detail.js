@@ -9,7 +9,7 @@ export default {
   component: app,
 
   indexRoute: {
-    getComponent (nextState, cb) {
+    getComponent (nextState: Object, cb: Function) {
       // 除主页外的其它组件懒加载
       require.ensure([], require => {
         const reducers = require('@/redux/reducers/detail').default

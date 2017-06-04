@@ -11,7 +11,7 @@ import {
   SET_HOME_FEED
 } from '../consts'
 
-export function * fetchHomeFeed (): void {
+export function * fetchHomeFeed (): any {
   yield take(FETCH_HOME_FEED)
   let homeFeed = yield select(state => state.homeFeed)
   console.log(homeFeed, '从store获取')
