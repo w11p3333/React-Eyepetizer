@@ -1,11 +1,11 @@
-Hash: ca64731bd392a5dcd31c
+Hash: cf553786526aed94b24a
 Version: webpack 1.14.0
-Time: 21819ms
+Time: 32261ms
                             Asset       Size  Chunks             Chunk Names
-   js/app.ab937726b8bdfcdd0558.js    69.1 kB       0  [emitted]  app
-js/vendor.2897cc7440ed5d158565.js     616 kB       1  [emitted]  vendor
+   js/app.dc25e35f0bba5b8591e4.js    69.2 kB       0  [emitted]  app
+js/vendor.411f4f5821270d35d298.js     616 kB       1  [emitted]  vendor
                        index.html  689 bytes          [emitted]  
-chunk    {0} js/app.ab937726b8bdfcdd0558.js (app) 147 kB {1} [rendered]
+chunk    {0} js/app.dc25e35f0bba5b8591e4.js (app) 147 kB {1} [rendered]
     [0] ./src/main.js 1.2 kB {0} [built]
    [15] ./src/style/index.js 916 bytes {0} [built]
    [42] ./src/components/home/common/sprite.js 969 bytes {0} [built]
@@ -116,7 +116,7 @@ chunk    {0} js/app.ab937726b8bdfcdd0558.js (app) 147 kB {1} [rendered]
   [525] ./~/css-loader!./~/sass-loader!./src/assets/scss/normalize.scss 2.19 kB {0} [built]
   [554] ./~/moment/locale ^\.\/.*$ 2.79 kB {0} [optional] [built]
   [660] ./src/assets/scss/normalize.scss 1.07 kB {0} [built]
-chunk    {1} js/vendor.2897cc7440ed5d158565.js (vendor) 1.81 MB [rendered]
+chunk    {1} js/vendor.411f4f5821270d35d298.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {1} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {1} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {1} [built]

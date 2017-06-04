@@ -36,9 +36,9 @@ module.exports = merge(baseConfig, {
       chunksSortMode: 'none'
     }),
     new BrowserSyncPlugin({
-      host: config.dev.host,
+      host: '127.0.0.1',
       port: config.dev.port,
-      proxy: `http:/${config.dev.host}:${config.dev.proxyPort}/`,
+      proxy: 'http://127.0.0.1:9000',
       logConnections: false,
       notify: false
     }, {
