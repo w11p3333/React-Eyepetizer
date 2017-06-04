@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { injectGlobal } from 'styled-components'
 
@@ -24,7 +24,7 @@ injectGlobal`
   }
 `
 
-class MyModal extends Component {
+class MyModal extends PureComponent {
 
   constructor (props) {
     super(props)
@@ -56,7 +56,7 @@ class MyModal extends Component {
 
   getContent (platform) {
     const className = this.state.isShow ? 'modal--fade-in' : 'modal--fade-out'
-    let imgPrefix = '//static.kaiyanapp.com/eyepetizer-web/assets/images/index/'
+    let imgPrefix = 'http://static.kaiyanapp.com/eyepetizer-web/assets/images/index/'
     let srcImg
     let textElement
     switch (platform) {

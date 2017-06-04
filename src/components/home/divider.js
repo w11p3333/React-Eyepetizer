@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Container = styled.p`
@@ -10,6 +11,14 @@ const Container = styled.p`
   text-align: center;
 `
 
-export default _ => (
-  <Container>- May. 31 -</Container>
+const Divider = ({ text }) => (
+  <Container>
+    { text }
+  </Container>
 )
+
+Divider.propTypes = {
+  text: PropTypes.string.isRequired
+}
+
+export default Divider

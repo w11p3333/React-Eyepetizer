@@ -17,5 +17,5 @@ export default _ => (
     autoPlay
     loop
     muted
-    url='//static.kaiyanapp.com/eyepetizer-web/homepage.mp4' />
+    url='http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4' />
 )

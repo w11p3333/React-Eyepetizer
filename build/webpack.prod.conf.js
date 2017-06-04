@@ -15,8 +15,8 @@ module.exports = merge(baseConfig, {
   output: {
     path: config.build.distPath,
     publicPath: config.build.assetsPublicPath,
-    filename: 'js/[name].[chunkhash].js',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[id].[chunkhash].js'
   },
 
   // 生产环境分离css

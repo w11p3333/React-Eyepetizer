@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Container from '@/components/common/container'
 import Title from '@/components/detail/common/title'
@@ -7,7 +8,7 @@ import Tag from './tag'
 /**
  * 标签页
  */
-export default ({ tags }) => (
+const TagList = ({ tags }) => (
   <Container>
     <Title>热门标签</Title>
     <List>
@@ -19,3 +20,9 @@ export default ({ tags }) => (
     </List>
   </Container>
 )
+
+TagList.PropTypes = {
+  tags: PropTypes.array.isRequired
+}
+
+export default TagList

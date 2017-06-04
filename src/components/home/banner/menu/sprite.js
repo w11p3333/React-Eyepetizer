@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const size = '36px'
 
 const Sprite = styled.button`
-  background-image: url(//static.kaiyanapp.com/eyepetizer-web/assets/images/sprite_share.bc0f4494.png);
+  background-image: url(http://static.kaiyanapp.com/eyepetizer-web/assets/images/sprite_share.bc0f4494.png);
   background-repeat: no-repeat;
   background-size: ${size};
   opacity: .7;

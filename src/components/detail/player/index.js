@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -10,7 +10,7 @@ const Video = styled(Player)`
   position: absolute;
 `
 
-class MyPlayer extends Component {
+class MyPlayer extends PureComponent {
 
   constructor (props) {
     super(props)

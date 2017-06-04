@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 
@@ -9,34 +9,23 @@ import Figcaption from './figcaption'
 import Title from './title'
 import Meta from '@/components/common/meta'
 
-class RelateList extends Component {
-
-  constructor (props) {
-    super(props)
-  }
-
-  render () {
-    const { videoList } = this.props
-    return (
-      <Container>
-        {
-          videoList.map(video => (
-            <Link to={ { pathname: `/detail/${video.get('id')}` } }>
-              <Section>
-                <Figure src={ video.get('coverForDetail') } />
-                <Figcaption>
-                  <Title>{video.get('title')}</Title>
-                  <Meta category={ video.get('category') } time={ video.get('duration') } /> 
-                </Figcaption>
-              </Section>
-            </Link>
-          ))
-      } 
-      </Container>
-    )
-  }
-  
-}
+const RelateList = ({ videoList }) => (
+  <Container>
+    {
+      videoList.map(video => (
+        <Link to={ { pathname: `/detail/${video.get('id')}` } }>
+          <Section>
+            <Figure src={ video.get('coverForDetail') } />
+            <Figcaption>
+              <Title>{video.get('title')}</Title>
+              <Meta category={ video.get('category') } time={ video.get('duration') } /> 
+            </Figcaption>
+          </Section>
+        </Link>
+      ))
+  } 
+  </Container>
+)
 
 RelateList.propTypes = {
   videoList: PropTypes.object.isRequired

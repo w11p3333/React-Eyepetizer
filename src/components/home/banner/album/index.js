@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { injectGlobal } from 'styled-components'
 
 import Container from './container'
@@ -11,11 +11,11 @@ injectGlobal`
   }
 `
 
-class Album extends Component {
+class Album extends PureComponent {
 
   constructor (props) {
     super(props)
-    const prefix = '//static.kaiyanapp.com/eyepetizer-web/assets/images/index/home_bk_'
+    const prefix = 'http://static.kaiyanapp.com/eyepetizer-web/assets/images/index/home_bk_'
     const suffix = '.jpg'
     this.state = {
       imgArr: [

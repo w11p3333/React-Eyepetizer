@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 
 import Container from './container'
@@ -18,11 +18,7 @@ const Email = styled(Sprite)`
   background-size: 54px;
 `
 
-export default class Menu extends Component {
-
-  constructor (props) {
-    super(props)
-  }
+export default class Menu extends PureComponent {
 
   render () {
     return (

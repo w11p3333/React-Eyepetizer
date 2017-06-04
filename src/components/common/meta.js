@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -9,25 +9,15 @@ const Container = styled.p`
   opacity: .85;
 `
 
-class Meta extends Component {
-
-  constructor (props) {
-    super(props)
-  }
-
-  render () {
-    const { category, time } = this.props
-    return (
-      <Container { ...this.props }># { category } / { formatter(time * 1000) } </Container>
-    )
-  }
-
-}
+const Meta = ({ category, time }) => (
+  <Container>
+    # { category } / { formatter(time * 1000) } 
+  </Container>
+)
 
 Meta.propTypes = {
   category: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired
-
 }
 
 export default Meta

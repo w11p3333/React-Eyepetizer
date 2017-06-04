@@ -4,10 +4,7 @@ import {
   is,
   fromJS
 } from 'immutable'
-
-// import {
-//   fetchHomeFeed
-// } from '@/redux/sagas/home'
+import moment from 'moment'
 
 import Modal from '@/components/common/modal'
 import Container from './container'
@@ -20,15 +17,18 @@ export default class Index extends Component {
 
   constructor (props) {
     super(props)
+    const today = moment().format('MMM. D')
+    this.state = {
+      today: `- ${today} -`
+    }
   }
 
   componentWillMount () {
     this.props.fetchHomeFeed()
-    // this.props.dispatch(fetchHomeFeed)
   }
 
-  shouldComponentUpdate (nextProps) {
-    return !is(fromJS(nextProps), fromJS(this.props))
+  shouldComponentUpdate (nextProps, nextState) {
+    return !is(fromJS(nextProps), fromJS(this.props)) || !is(fromJS(this.state), fromJS(nextState))
   }
 
   render () {
@@ -36,16 +36,16 @@ export default class Index extends Component {
     return (
       <Container>
         <Banner { ...this.props } /> 
-        <Divider />
+        <Divider text={ this.state.today } />
         {
           !homeFeed.isEmpty() &&
           homeFeed.map(item => (
             <Link to={ `/detail/${ item.get('id') }` }>
               <Cover 
-              cover={ item.get('coverForFeed') } 
-              title={ item.get('title') }
-              category={ item.get('category') }
-              time={ item.get('duration') } />
+                cover={ item.get('coverForFeed') } 
+                title={ item.get('title') }
+                category={ item.get('category') }
+                time={ item.get('duration') } />
             </Link>
           ))
         }

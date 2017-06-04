@@ -14,7 +14,7 @@ export default _ => (
        <Link to="/">
         <Logo />
       </Link>
-      <QRCode src="//static.kaiyanapp.com/eyepetizer-web/assets/images/eyepetizer-wx-qr.9c58110c.png" />
+      <QRCode src="http://static.kaiyanapp.com/eyepetizer-web/assets/images/eyepetizer-wx-qr.9c58110c.png" />
        <QRTip>长按二维码关注「开眼 Eyepetizer」微信公众号</QRTip> 
     </Container>
 )

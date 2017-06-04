@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { mediaQuery } from '@/style'
-
-const size = 450
+import {
+  mediaQuery,
+  homeCover
+} from '@/style'
 
 export default styled.section`
   background-image: url(${ props => props.cover });
@@ -14,7 +15,8 @@ export default styled.section`
   }
 
   cursor: pointer;
-  height: ${size}px;
+  height: ${homeCover.height}px;
+  width: 100%:
   
   position: relative;
   display: flex;
@@ -22,6 +24,6 @@ export default styled.section`
   align-items: center;
 
   ${mediaQuery} {
-    height: ${size / 2}px;
+    height: ${homeCover.height / 2}px;
   }
 `

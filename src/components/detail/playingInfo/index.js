@@ -1,32 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import Container from './container'
 import Title from './title'
 import Meta from './meta'
 import Desc from './desc'
 
-class PlayingInfo extends Component {
+const MyMeta = styled(Meta)`
+  font-size: 14px;
+`
 
-  constructor (props) {
-    super(props)
-  }
-
-  render () {
-    const videoInfo = this.props.videoInfo
-    return (
-      <Container>
-        <Title>{videoInfo.get('title')}</Title>
-        <Meta
-          fontSize="14px"
-          category={ videoInfo.get('category') } 
-          time={ videoInfo.get('duration') } />
-        <Desc>{ videoInfo.get('description') }</Desc>
-      </Container>
-    )
-  }
-  
-}
+const PlayingInfo = ({ videoInfo }) => (
+  <Container>
+    <Title>{ videoInfo.get('title') }</Title>
+    <MyMeta
+      category={ videoInfo.get('category') }
+      time={ videoInfo.get('duration') } />
+    <Desc>{ videoInfo.get('description') }</Desc>
+  </Container>
+)
 
 PlayingInfo.propTypes = {
   videoInfo: PropTypes.object.isRequired
