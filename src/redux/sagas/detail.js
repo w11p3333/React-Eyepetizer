@@ -15,10 +15,12 @@ import {
 } from '../consts'
 
 function * fetchVideoInfo (id: number): void {
-  let videoInfo = yield select(state => state.videoInfo)
+  let videoInfo = yield select(state => state.playVideoInfo)
+  console.log(videoInfo, '从store获取')
   if (videoInfo) {
     return
   }
+  console.log(videoInfo, '从store获取')
   videoInfo = (yield call(detailService.fetchVideoInfo, id)).data
   yield put({
     type: SET_VIDEO_INFO,
@@ -27,10 +29,12 @@ function * fetchVideoInfo (id: number): void {
 }
 
 function * fetchVideoList (id: number): void {
-  let videoList = yield select(state => state.videoList)
+  let videoList = yield select(state => state.videoListInfo)
+  console.log(videoList, '从store获取')
   if (videoList) {
     return
   }
+  console.log('从service获取')
   videoList = (yield call(detailService.fetchVideoList, id)).data
   yield put({
     type: SET_VIDEO_LIST,
@@ -39,10 +43,12 @@ function * fetchVideoList (id: number): void {
 }
 
 function * fetchReplyList (id: number): void {
-  let replyList = yield select(state => state.replyList)
+  let replyList = yield select(state => state.replyListInfo)
+  console.log(replyList, '从store获取')
   if (replyList) {
     return
   }
+  console.log('从service获取')
   replyList = (yield call(detailService.fetchReplyList, id)).data
   yield put({
     type: SET_REPLY_LIST,

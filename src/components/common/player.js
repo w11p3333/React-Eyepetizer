@@ -7,20 +7,22 @@ const MyVideo = styled.video`
   width: 100%;
 `
 
-const Video = props => (
-  <MyVideo { ...props }>
-    <source src={ props.url } />
+const Video = ({ url, muted, loop, controls, autoPlay }) => (
+  <MyVideo 
+    muted={ muted }
+    loop={ loop }
+    controls={ controls }
+    autoPlay={ autoPlay }>
+    <source src={ url } />
   </MyVideo>
 )
 
 Video.propTypes = {
   url: PropTypes.string.isRequired,
-  muted: PropTypes.boolean,
-  loop: PropTypes.boolean,
-  controls: PropTypes.boolean,
-  autoPlay: PropTypes.boolean,
-  height: PropTypes.height,
-  width: PropTypes.width
+  muted: PropTypes.bool,
+  loop: PropTypes.bool,
+  controls: PropTypes.bool,
+  autoPlay: PropTypes.bool
 }
 
 export default Video

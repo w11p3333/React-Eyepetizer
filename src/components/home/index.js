@@ -97,7 +97,7 @@ export default class Index extends Component {
     switch (platform) {
 
       case 'BackEnd':
-        window.open('//open.eyepetizer.net/#!/landing')
+        window.open('http://open.eyepetizer.net/#!/landing')
         break
 
       case 'Weibo':
@@ -109,9 +109,7 @@ export default class Index extends Component {
         break
 
       default:
-        this.setState({
-          platform
-        })
+        this.setState({ platform })
         break
 
     }
