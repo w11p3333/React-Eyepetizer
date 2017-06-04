@@ -9,6 +9,7 @@ export default styled.div`
   flex: 1;
   height: ${homeCover.height}px;
   width: 100%;
+  left: 0;
   background: rgba(0, 0, 0, .4);
   position: absolute;
 
