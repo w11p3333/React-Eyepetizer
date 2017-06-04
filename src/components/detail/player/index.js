@@ -17,6 +17,7 @@ class MyPlayer extends PureComponent {
     this.state = {
       startPlay: false
     }
+    this.startPlay = this.startPlay.bind(this)
     this.stopPlay = this.stopPlay.bind(this)
   }
 

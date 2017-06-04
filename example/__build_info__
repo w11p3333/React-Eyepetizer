@@ -1,15 +1,15 @@
-Hash: f511339d89bfaedf09a0
+Hash: c5ffd86ab6c5a378d076
 Version: webpack 1.14.0
-Time: 23726ms
+Time: 34159ms
                          Asset       Size  Chunks             Chunk Names
-vendor.337c5f0ddd9b4bdd356d.js     616 kB       0  [emitted]  vendor
-     1.41f0690ef774006e1ff6.js    20.4 kB       1  [emitted]  video
+vendor.48d479af496203b4cb66.js     616 kB       0  [emitted]  vendor
+     1.097d8352b394824981c1.js    20.4 kB       1  [emitted]  video
    app.89dd6ce6e48f339953ad.js    46.7 kB       2  [emitted]  app
                     index.html  785 bytes          [emitted]  
-                   favicon.ico    4.29 kB          [emitted]  
                  manifest.json  269 bytes          [emitted]  
+                   favicon.ico    4.29 kB          [emitted]  
                      logo.jpeg    21.2 kB          [emitted]  
-chunk    {0} vendor.337c5f0ddd9b4bdd356d.js (vendor) 1.81 MB [rendered]
+chunk    {0} vendor.48d479af496203b4cb66.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {0} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {0} [built]
@@ -584,7 +584,7 @@ chunk    {0} vendor.337c5f0ddd9b4bdd356d.js (vendor) 1.81 MB [rendered]
   [678] ./~/symbol-observable/index.js 41 bytes {0} [built]
   [679] ./~/symbol-observable/lib/index.js 661 bytes {0} [built]
   [680] ./~/symbol-observable/lib/ponyfill.js 449 bytes {0} [built]
-chunk    {1} 1.41f0690ef774006e1ff6.js (video) 44 kB {2} [rendered]
+chunk    {1} 1.097d8352b394824981c1.js (video) 44.1 kB {2} [rendered]
    [71] ./src/components/common/container.js 782 bytes {1} [built]
   [152] ./src/components/detail/common/title.js 736 bytes {1} [built]
   [381] ./src/components/detail/article.js 901 bytes {1} [built]
@@ -600,7 +600,7 @@ chunk    {1} 1.41f0690ef774006e1ff6.js (video) 44 kB {2} [rendered]
   [391] ./src/components/detail/loading/rotate.js 1.33 kB {1} [built]
   [392] ./src/components/detail/loading/static.js 1.05 kB {1} [built]
   [393] ./src/components/detail/player/container.js 772 bytes {1} [built]
-  [394] ./src/components/detail/player/index.js 3.56 kB {1} [built]
+  [394] ./src/components/detail/player/index.js 3.61 kB {1} [built]
   [395] ./src/components/detail/player/playButton.js 1.68 kB {1} [built]
   [396] ./src/components/detail/playingInfo/container.js 833 bytes {1} [built]
   [397] ./src/components/detail/playingInfo/desc.js 692 bytes {1} [built]
