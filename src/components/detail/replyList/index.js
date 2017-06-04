@@ -16,13 +16,13 @@ const ReplyList = ({ replyList }) => (
       {
           replyList.map(reply =>
               <Section>
-                <Avatar src={ reply.get('user').get('avatar') } />
+                <Avatar src={ reply.user.avatar } />
                 <Article>
-                  <Text>{ reply.get('user').get('nickname') }</Text>
-                  <Time>{ reply.get('time') }</Time>
-                  <Text>{ reply.get('message') }</Text>
+                  <Text>{ reply.user.nickname }</Text>
+                  <Time>{ reply.time }</Time>
+                  <Text>{ reply.message }</Text>
                   {
-                      reply.get('hot') &&
+                      reply.hot &&
                       <Hot>- Hot -</Hot>
                   }
                 </Article>

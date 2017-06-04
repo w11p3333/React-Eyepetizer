@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { mediaQuery } from '@/style'
 import Player from '@/components/common/player'
@@ -12,10 +13,16 @@ const MyPlayer = styled(Player)`
   }
 `
 
-export default _ => (
+const BannerPlayer = ({ url }) => (
   <MyPlayer
     autoPlay
     loop
     muted
-    url='http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4' />
+    url={ url } />
 )
+
+BannerPlayer.PropTypes = {
+  url: PropTypes.string.isRequired
+}
+
+export default BannerPlayer

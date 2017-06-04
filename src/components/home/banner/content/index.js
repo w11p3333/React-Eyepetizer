@@ -6,11 +6,11 @@ import Intro from './intro'
 import Popularize from './popularize'
 import Entry from './entry/'
 
-export default props => (
+export default ({ clickHandler }) => (
   <Container>
     <Logo />
     <Intro />
-    <Popularize { ...props } />
-    <Entry />
+    <Popularize clickHandler={ clickHandler } />
+    <Entry clickHandler={ clickHandler } />
   </Container>
 )

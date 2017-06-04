@@ -17,17 +17,18 @@ class MyPlayer extends PureComponent {
     this.state = {
       startPlay: false
     }
+    this.stopPlay = this.stopPlay.bind(this)
   }
 
   render () {
     return (
-      <Container onClick={ this.stopPlay.bind(this) }>
+      <Container onClick={ this.stopPlay }>
         <Video
         controls={ this.state.startPlay }
         url={ this.props.url } />
         {
           !this.state.startPlay &&
-          <PlayButton onClick={ this.startPlay.bind(this) } />
+          <PlayButton onClick={ this.startPlay } />
         }
       </Container>
     )

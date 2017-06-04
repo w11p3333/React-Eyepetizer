@@ -1,5 +1,4 @@
 // @flow
-import { fromJS } from 'immutable'
 import moment from 'moment'
 import { 
   SET_VIDEO_INFO,
@@ -11,11 +10,11 @@ import { createReducer } from './index'
 
 // 导出名字与state名字相同
 export const playVideoInfo = createReducer(initState.playVideoInfo, {
-  [SET_VIDEO_INFO]: (state, { payload }) => fromJS(payload)
+  [SET_VIDEO_INFO]: (state, { payload }) => payload
 })
 
 export const videoListInfo = createReducer(initState.videoListInfo, {
-  [SET_VIDEO_LIST]: (state, { payload }) => fromJS(payload)
+  [SET_VIDEO_LIST]: (state, { payload }) => payload
 })
 
 export const replyListInfo = createReducer(initState.replyListInfo, {
@@ -28,12 +27,12 @@ export const replyListInfo = createReducer(initState.replyListInfo, {
       }
       return reply
     })
-    return fromJS({
+    return {
       count,
       nextPageUrl,
       replyList,
       total
-    })
+    }
   }
 })
 

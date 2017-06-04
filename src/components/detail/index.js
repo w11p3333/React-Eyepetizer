@@ -34,22 +34,21 @@ export default class Detail extends Component {
 
   render () {
     const { playVideoInfo, videoListInfo, replyListInfo } = this.props
-    
-    if (playVideoInfo.isEmpty() || videoListInfo.isEmpty() || replyListInfo.isEmpty()) {
-      return <Loading />
-    }
-
-    return (
+    if (playVideoInfo && videoListInfo && replyListInfo) {
+      return (
         <Container>
-          <Player url={playVideoInfo.get('playUrl')} />
+          <Player url={ playVideoInfo.playUrl } />
             <Article >
-              <PlayingInfo videoInfo={playVideoInfo} />
-              <RelateList videoList={videoListInfo.get('videoList')} />
-              <ReplyList replyList={replyListInfo.get('replyList')} />
-              <Tag tags={playVideoInfo.get('tags')} />
+              <PlayingInfo videoInfo={ playVideoInfo } />
+              <RelateList videoList={ videoListInfo.videoList } />
+              <ReplyList replyList={ replyListInfo.replyList } />
+              <Tag tags={ playVideoInfo.tags } />
               <Footer /> 
             </Article> 
         </Container>
-    )
+      )
+    } else {
+      return <Loading />
+    }
   }
 }

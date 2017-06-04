@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Container from './container'
@@ -18,24 +19,16 @@ const Email = styled(Sprite)`
   background-size: 54px;
 `
 
-export default class Menu extends PureComponent {
+const Menu = ({ clickHandler }) => (
+  <Container>
+    <WeChat onClick={ _ => clickHandler('WeChat') } />
+    <Weibo onClick={ _ => clickHandler('Weibo') } />
+    <Email onClick={ _ => clickHandler('Email') } />
+  </Container>
+)
 
-  render () {
-    return (
-      <Container>
-        <WeChat onClick={ _ => this.props.setPlatform('WeChat') } />
-        <Weibo onClick={ this.pushToWeibo } />
-        <Email onClick={ this.pushToEmail } />
-      </Container>
-    )
-  }
-
-  pushToWeibo () {
-    window.open('//weibo.com/eyepetizer')
-  }
-
-  pushToEmail () {
-    window.location.href = 'mailto:bd@eyepetizer.net'
-  }
-
+Menu.PropTypes = {
+  clickHandler: PropTypes.func.isRequired
 }
+
+export default Menu

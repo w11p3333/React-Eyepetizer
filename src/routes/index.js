@@ -4,9 +4,9 @@ import app from '@/views/app'
 import detail from './detail'
 import notFound from '@/views/notFound'
 
-import homeReducers from '@/redux/reducers/home'
-import homeActions from '@/redux/actions/home'
-import homeView from '@/components/home'
+import reducers from '@/redux/reducers/home'
+import actions from '@/redux/actions/home'
+import component from '@/components/home'
 import { injectReducer } from '@/redux/reducers'
 
 export default {
@@ -16,20 +16,17 @@ export default {
 
   indexRoute: {
     getComponent (nextState, cb) {
-      require.ensure([], require => {
-
         // 注入 Reducer
-        Object.keys(homeReducers).map(key => {
-          injectReducer(key, homeReducers[key])
-        })
-        // 生成container
-        const homeContainer = connect(
-          ({ homeFeed, platform }) => ({ homeFeed, platform }),
-          homeActions
-        )(homeView)
+      Object.keys(reducers).map(key => {
+        injectReducer(key, reducers[key])
+      })
+      // 生成container
+      const homeContainer = connect(
+        ({ homeFeed, platform }) => ({ homeFeed, platform }),
+        actions
+      )(component)
 
-        cb(null, homeContainer)
-      }, 'home')
+      cb(null, homeContainer)
     }
   },
 

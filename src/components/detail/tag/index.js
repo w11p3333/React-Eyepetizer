@@ -14,7 +14,7 @@ const TagList = ({ tags }) => (
     <List>
       {
         tags.map(tag => 
-          <Tag>{ tag.get('name') }</Tag>
+          <Tag>{ tag.name }</Tag>
         )
       }
     </List>

@@ -1,27 +1,20 @@
 // @flow
-import { fromJS } from 'immutable'
 import initState from '@/redux/store/initState'
 import { createReducer } from './index'
 import {
-  SET_HOME_FEED,
-  SET_PLATFORM
+  SET_HOME_FEED
 } from '../consts'
 
 const homeFeed = createReducer(initState.homeFeed, {
   [SET_HOME_FEED]: (state, { payload }) => {
     const [ daily ] = payload.dailyList
     const { videoList } = daily
-    return fromJS(videoList)
+    return videoList
   }
 })
 
-const platform = createReducer(initState.platform, {
-  [SET_PLATFORM]: (state, { payload }) => payload
-})
-
 export default {
-  homeFeed,
-  platform
+  homeFeed
 }
 // 等同于下面这段
 // export default function (state = initState.homeFeed, { type, payload }) {

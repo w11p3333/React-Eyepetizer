@@ -6,7 +6,7 @@ const bigSize = 428
 const smallSize = 285
 
 export default styled.figure`
-  background-image: url(http://static.kaiyanapp.com/eyepetizer-web/assets/images/index/sprite-s93ca05f687.023a526d.png);
+  (http://static.kaiyanapp.com/eyepetizer-web/assets/images/index/sprite-s93ca05f687.023a526d.png);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: ${bigSize}px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import Container from './container'
 import Sprite from '@/components/home/common/sprite'
@@ -17,9 +18,15 @@ const Android = styled(Button)`
   background-position: 0 14.3136%;
 `
 
-export default ({ setPlatform }) => (
+const Download = ({ clickHandler }) => (
   <Container>
-    <IOS onClick={ _ => setPlatform('iOS') } />
-    <Android onClick={ _ => setPlatform('Android') } />
+    <IOS onClick={ _ => clickHandler('iOS') } />
+    <Android onClick={ _ => clickHandler('Android') } />
   </Container>
 )
+
+Download.PropTypes = {
+  clickHandler: PropTypes.func.isRequired
+}
+
+export default Download

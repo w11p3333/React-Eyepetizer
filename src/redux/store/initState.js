@@ -1,30 +1,21 @@
 // @flow
-/**
- * 本文件的作用就是直观呈现 整个应用状态结构树 及其 初始值
- */
-import {
-  Map
-} from 'immutable'
 
 export default {
 
   // home
 
   // 首页数据流
-  homeFeed: Map({}),
-
-  // 平台推广
-  platform: '',
+  homeFeed: null,
 
   // detail
 
   // 播放的视频信息
-  playVideoInfo: Map({}),
+  playVideoInfo: null,
 
   // 视频列表信息
-  videoListInfo: Map({}),
+  videoListInfo: null,
 
   // 回复列表信息
-  replyListInfo: Map({})
+  replyListInfo: null
 
 }

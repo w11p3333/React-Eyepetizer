@@ -13,12 +13,12 @@ const RelateList = ({ videoList }) => (
   <Container>
     {
       videoList.map(video => (
-        <Link to={ { pathname: `/detail/${video.get('id')}` } }>
+        <Link to={ { pathname: `/detail/${video.id}` } }>
           <Section>
-            <Figure src={ video.get('coverForDetail') } />
+            <Figure src={ video.coverForDetail } />
             <Figcaption>
-              <Title>{video.get('title')}</Title>
-              <Meta category={ video.get('category') } time={ video.get('duration') } /> 
+              <Title>{video.title}</Title>
+              <Meta category={ video.category } time={ video.duration } /> 
             </Figcaption>
           </Section>
         </Link>

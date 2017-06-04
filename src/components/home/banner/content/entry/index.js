@@ -1,22 +1,16 @@
-import React, { Component } from 'react'
-
+import React from 'react'
+import PropTypes from 'prop-types'
 import Container from './container'
 import Text from './text'
 
-class Entry extends Component {
-
-  render () {
-    return (
-      <Container onClick={ this.pushToBackground } >
+const Menu = ({ clickHandler }) => (
+  <Container onClick={ _ => clickHandler('BackEnd') } >
         <Text>作者入口</Text>
-      </Container>
-    )
-  }
+  </Container>
+)
 
-  pushToBackground () {
-    window.open('//open.eyepetizer.net/#!/landing')
-  }
-
+Menu.PropTypes = {
+  clickHandler: PropTypes.func.isRequired
 }
 
-export default Entry
+export default Menu

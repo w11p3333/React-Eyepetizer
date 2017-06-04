@@ -2,6 +2,7 @@
 import {
   call,
   take,
+  select,
   put
 } from 'redux-saga/effects'
 import homeService from '@/apis/home'
@@ -12,9 +13,13 @@ import {
 
 export function * fetchHomeFeed (): void {
   yield take(FETCH_HOME_FEED)
-  const { data } = yield call(homeService.fetchHomeFeed)
+  let homeFeed = yield select(state => state.homeFeed)
+  if (homeFeed) {
+    return
+  }
+  homeFeed = (yield call(homeService.fetchHomeFeed)).data
   yield put({
     type: SET_HOME_FEED,
-    payload: data
+    payload: homeFeed
   })
 }

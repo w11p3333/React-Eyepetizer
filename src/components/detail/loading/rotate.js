@@ -15,7 +15,7 @@ const rotate360 = keyframes`
 export default styled.figure`
   background-image: url(${loading.rotateImg});
   background-size: cover;
-  height: ${loading.height};
-  width: ${loading.width};
+  height: ${loading.height}px;
+  width: ${loading.width}px;
   animation: ${rotate360} .5s linear infinite;
 ` 

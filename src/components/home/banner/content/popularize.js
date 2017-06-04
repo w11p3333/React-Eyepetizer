@@ -32,9 +32,9 @@ const Android = styled(Button)`
   background-position: 0 7.22186%;
 `
 
-export default ({ setPlatform }) => (
+export default ({ clickHandler }) => (
   <Container>
-    <IOS onClick={ _ => setPlatform('iOS') } />
-    <Android onClick={ _ => setPlatform('Android') } />
+    <IOS onClick={ _ => clickHandler('iOS') } />
+    <Android onClick={ _ => clickHandler('Android') } />
   </Container>
 )

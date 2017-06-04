@@ -13,11 +13,11 @@ const MyMeta = styled(Meta)`
 
 const PlayingInfo = ({ videoInfo }) => (
   <Container>
-    <Title>{ videoInfo.get('title') }</Title>
+    <Title>{ videoInfo.title }</Title>
     <MyMeta
-      category={ videoInfo.get('category') }
-      time={ videoInfo.get('duration') } />
-    <Desc>{ videoInfo.get('description') }</Desc>
+      category={ videoInfo.category }
+      time={ videoInfo.duration } />
+    <Desc>{ videoInfo.description }</Desc>
   </Container>
 )
 

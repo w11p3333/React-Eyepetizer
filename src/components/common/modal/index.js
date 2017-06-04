@@ -28,21 +28,12 @@ class MyModal extends PureComponent {
 
   constructor (props) {
     super(props)
-    this.state = {
-      isShow: false
-    }
     this.click = this.click.bind(this)
-  }
-
-  componentWillReceiveProps (nextProps) {
-    this.setState({
-      isShow: !!nextProps.platform
-    })
   }
 
   render () {
     return (
-      <Container className={ this.state.isShow ? 'modal--show' : 'modal--hide' } onClick={ this.click } id="modal" >
+      <Container className={ this.props.isShow ? 'modal--show' : 'modal--hide' } onClick={ this.click } id="modal" >
         { this.getContent(this.props.platform) }
       </Container>
     )
@@ -50,12 +41,12 @@ class MyModal extends PureComponent {
 
   click (event) {
     if (event.target.id === 'modal') {
-      this.props.setPlatform('')
+      this.props.close()
     }
   }
 
   getContent (platform) {
-    const className = this.state.isShow ? 'modal--fade-in' : 'modal--fade-out'
+    const className = this.props.isShow ? 'modal--fade-in' : 'modal--fade-out'
     let imgPrefix = 'http://static.kaiyanapp.com/eyepetizer-web/assets/images/index/'
     let srcImg
     let textElement
@@ -95,6 +86,8 @@ class MyModal extends PureComponent {
 }
 
 MyModal.PropTypes = {
+  close: PropTypes.func.isRequired,
+  isShow: PropTypes.bool.isRequired,
   platform: PropTypes.string.isRequired
 }
 
