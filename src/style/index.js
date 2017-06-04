@@ -5,7 +5,7 @@ export const mediaQuery = '@media screen and (max-width: 1024px)'
 // detail
 export const detail = {
   border: '1px solid white',
-  bgImg: 'http://img.kaiyanapp.com/0d0597426e182c8bed5de1824207cba0.jpeg?imageMogr2/quality/60/format/jpg',
+  bgImg: '//img.kaiyanapp.com/0d0597426e182c8bed5de1824207cba0.jpeg?imageMogr2/quality/60/format/jpg',
   videoPlayBtnImg: '//static.kaiyanapp.com/eyepetizer-web/assets/images/detail/icon_play@2x.3b9f9ba5.png',
   logoImg: '//static.kaiyanapp.com/eyepetizer-web/assets/images/detail/bottom_logo@3x.556cae6b.png'
 }

@@ -1,19 +1,19 @@
-Hash: 958b0d052da6e816c2d0
+Hash: e6e21f9e577efd2cba92
 Version: webpack 1.14.0
-Time: 20958ms
+Time: 31014ms
                             Asset       Size  Chunks             Chunk Names
-   js/app.1ed335fc17b1c1e8c1b8.js    69.2 kB       0  [emitted]  app
-js/vendor.1306ed1c58dfe5cc57a2.js     616 kB       1  [emitted]  vendor
+   js/app.ac4abfcc064ee07f1de8.js    69.2 kB       0  [emitted]  app
+js/vendor.0ece78ca19ab9ffdd27e.js     616 kB       1  [emitted]  vendor
                        index.html  689 bytes          [emitted]  
-chunk    {0} js/app.1ed335fc17b1c1e8c1b8.js (app) 147 kB {1} [rendered]
+chunk    {0} js/app.ac4abfcc064ee07f1de8.js (app) 147 kB {1} [rendered]
     [0] ./src/main.js 1.2 kB {0} [built]
-   [15] ./src/style/index.js 921 bytes {0} [built]
+   [15] ./src/style/index.js 916 bytes {0} [built]
    [42] ./src/components/home/common/sprite.js 969 bytes {0} [built]
    [48] ./src/redux/consts/index.js 531 bytes {0} [built]
    [60] ./src/redux/reducers/index.js 1.24 kB {0} [built]
    [72] ./src/components/common/container.js 782 bytes {0} [built]
    [91] ./src/components/common/meta.js 2.46 kB {0} [built]
-  [150] ./src/apis/const.js 152 bytes {0} [built]
+  [150] ./src/apis/const.js 153 bytes {0} [built]
   [151] ./src/apis/http.js 291 bytes {0} [built]
   [152] ./src/components/common/player.js 2.31 kB {0} [built]
   [153] ./src/components/detail/common/title.js 736 bytes {0} [built]
@@ -116,7 +116,7 @@ chunk    {0} js/app.1ed335fc17b1c1e8c1b8.js (app) 147 kB {1} [rendered]
   [525] ./~/css-loader!./~/sass-loader!./src/assets/scss/normalize.scss 2.19 kB {0} [built]
   [554] ./~/moment/locale ^\.\/.*$ 2.79 kB {0} [optional] [built]
   [660] ./src/assets/scss/normalize.scss 1.07 kB {0} [built]
-chunk    {1} js/vendor.1306ed1c58dfe5cc57a2.js (vendor) 1.81 MB [rendered]
+chunk    {1} js/vendor.0ece78ca19ab9ffdd27e.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {1} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {1} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {1} [built]
