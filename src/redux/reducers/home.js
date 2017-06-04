@@ -5,7 +5,7 @@ import {
   SET_HOME_FEED
 } from '../consts'
 
-const homeFeed = createReducer(initState.homeFeed, {
+const homeFeed: Function = createReducer(initState.homeFeed, {
   [SET_HOME_FEED]: (state, { payload }) => {
     const [ daily ] = payload.dailyList
     const { videoList } = daily

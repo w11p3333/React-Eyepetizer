@@ -14,11 +14,7 @@ import {
 export function * fetchHomeFeed (): any {
   yield take(FETCH_HOME_FEED)
   let homeFeed = yield select(state => state.homeFeed)
-  console.log(homeFeed, '从store获取')
-  if (homeFeed) {
-    return
-  }
-  console.log(homeFeed, '从service获取')
+  if (homeFeed) return
   homeFeed = (yield call(homeService.fetchHomeFeed)).data
   yield put({
     type: SET_HOME_FEED,

@@ -16,11 +16,7 @@ import {
 
 function * fetchVideoInfo (id: number): any {
   let videoInfo = yield select(state => state.playVideoInfo)
-  console.log(videoInfo, '从store获取')
-  if (videoInfo) {
-    return
-  }
-  console.log(videoInfo, '从store获取')
+  if (videoInfo) return
   videoInfo = (yield call(detailService.fetchVideoInfo, id)).data
   yield put({
     type: SET_VIDEO_INFO,
@@ -30,11 +26,7 @@ function * fetchVideoInfo (id: number): any {
 
 function * fetchVideoList (id: number): any {
   let videoList = yield select(state => state.videoListInfo)
-  console.log(videoList, '从store获取')
-  if (videoList) {
-    return
-  }
-  console.log('从service获取')
+  if (videoList) return
   videoList = (yield call(detailService.fetchVideoList, id)).data
   yield put({
     type: SET_VIDEO_LIST,
@@ -44,11 +36,7 @@ function * fetchVideoList (id: number): any {
 
 function * fetchReplyList (id: number): any {
   let replyList = yield select(state => state.replyListInfo)
-  console.log(replyList, '从store获取')
-  if (replyList) {
-    return
-  }
-  console.log('从service获取')
+  if (replyList) return
   replyList = (yield call(detailService.fetchReplyList, id)).data
   yield put({
     type: SET_REPLY_LIST,

@@ -9,15 +9,15 @@ import initState from '@/redux/store/initState'
 import { createReducer } from './index'
 
 // 导出名字与state名字相同
-export const playVideoInfo = createReducer(initState.playVideoInfo, {
+export const playVideoInfo: Function = createReducer(initState.playVideoInfo, {
   [SET_VIDEO_INFO]: (state, { payload }) => payload
 })
 
-export const videoListInfo = createReducer(initState.videoListInfo, {
+export const videoListInfo: Function = createReducer(initState.videoListInfo, {
   [SET_VIDEO_LIST]: (state, { payload }) => payload
 })
 
-export const replyListInfo = createReducer(initState.replyListInfo, {
+export const replyListInfo: Function = createReducer(initState.replyListInfo, {
   [SET_REPLY_LIST]: (state, { payload }) => {
     const { count, nextPageUrl, replyList, total } = payload
     replyList.map((reply, index) => {
