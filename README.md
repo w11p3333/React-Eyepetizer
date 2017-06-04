@@ -15,13 +15,19 @@
 
 ## Intro
 
-[![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react)
-
-a simple eyeptizer demo by `React` + `Redux` + `Immutable` + `Flow` + `PWA`
+a simple react demo simulate `PWA` [eyeptizer website](http://www.kaiyanapp.com/) by using [Redux](https://github.com/reactjs/redux) + [Redux-saga](https://github.com/redux-saga/redux-saga) + [styled-components](https://github.com/styled-components/styled-components) + [immutable.js](https://github.com/facebook/immutable-js) + [Flow](https://github.com/facebook/flow)
 
 ## Preview
 
+### Web
+
 [demo](https://w11p3333.github.io/React-Eyepetizer/example)
+
+### Mobile
+
+Scan the qrcode
+
+<img src="https://qr.api.cli.im/qr?data=https%253A%252F%252Fw11p3333.github.io%252FReact-Eyepetizer%252Fexample&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=70c29e07411386aadce073e29209d542" style="width: 100px;"/>
 
 ## Usage
 
