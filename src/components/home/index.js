@@ -5,7 +5,6 @@ import {
   fromJS
 } from 'immutable'
 import moment from 'moment'
-import { mediaSize } from '@/style'
 
 // import { isMobile } from '@/utils'
 
@@ -38,23 +37,13 @@ export default class Index extends Component {
     this.state = {
       today: `- ${today} -`,
       platform: null,
-      videoUrl: 'http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4',
-      isShowVideo: this.isShowVideo() // mount并不会触发resize
+      videoUrl: 'http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4'
     }
     this.handlerPlatform = this.handlerPlatform.bind(this)
   }
 
   componentWillMount () {
     this.props.fetchHomeFeed()
-  }
-
-  componentDidMount () {
-    window.onresize = _ => {
-      // 调试时响应式切换
-        this.setState({
-          isShowVideo: this.isShowVideo()
-        })
-    }
   }
 
   shouldComponentUpdate (nextProps, nextState) {
@@ -70,11 +59,8 @@ export default class Index extends Component {
         <Banner>
           <BannerMenu clickHandler={ this.handlerPlatform } />
           <BannerContent clickHandler={ this.handlerPlatform } />
-          {
-            this.state.isShowVideo
-            ? <BannerPlayer url={ this.state.videoUrl } />
-            : <BannerAlbum id="test" />
-          }
+          <BannerPlayer url={ this.state.videoUrl } />
+          <BannerAlbum />
         </Banner>
 
         <Divider text={ this.state.today } />
@@ -129,10 +115,6 @@ export default class Index extends Component {
         break
 
     }
-  }
-
-  isShowVideo () {
-    return !(document.body.clientWidth <= mediaSize)
   }
 
 }

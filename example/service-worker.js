@@ -37,8 +37,8 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["./1.169a2b843c41b2352bee.js","8fbac5d1e3b8c692d4d2ec48c96ac003"],["./app.37b7b936b26d74b846b1.js","07d80608603c20e38e8b685eadcf7562"],["./favicon.ico","987ef8255cf8bc55dc7fb0ae90461ae9"],["./index.html","d87d95818ffe471b01152a1c9574dbc0"],["./logo.jpeg","fe7fb3e8e09cbcd42eef2036d833c0ba"],["./vendor.3466235e660b7bda7802.js","94f9a7c59a4e62796a8e01a6e8fbd130"]];
-var cacheName = 'sw-precache-v3-react-eyepetizer-version-1.3-' + (self.registration ? self.registration.scope : '');
+var precacheConfig = [["./1.097d8352b394824981c1.js","ab8bbb0fd5b84e6c1c8c05740f266990"],["./app.994257a82f68ad43b990.js","7e85f3f103ef149fa50347bb1ff263a7"],["./favicon.ico","987ef8255cf8bc55dc7fb0ae90461ae9"],["./index.html","352462757b5d5a9f90107ee93bbe92b9"],["./logo.jpeg","fe7fb3e8e09cbcd42eef2036d833c0ba"],["./vendor.df17c2690079f43231bc.js","c568c39eb8f8513af0d9ac2e93e54974"]];
+var cacheName = 'sw-precache-v3-react-eyepetizer-version-1.4-' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];
