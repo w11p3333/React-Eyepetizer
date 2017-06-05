@@ -1,15 +1,15 @@
-Hash: 3bcf8198f7b4dd09e0d0
+Hash: 408871f3db30c3e0ba0b
 Version: webpack 1.14.0
-Time: 22751ms
+Time: 20418ms
                          Asset       Size  Chunks             Chunk Names
-vendor.a5e967daef39df7a55de.js     616 kB       0  [emitted]  vendor
+vendor.3466235e660b7bda7802.js     616 kB       0  [emitted]  vendor
      1.169a2b843c41b2352bee.js    20.4 kB       1  [emitted]  video
-   app.bb0cdcd147fb2fa4ba1e.js    46.7 kB       2  [emitted]  app
+   app.37b7b936b26d74b846b1.js    46.5 kB       2  [emitted]  app
                     index.html  785 bytes          [emitted]  
                  manifest.json  269 bytes          [emitted]  
                    favicon.ico    4.29 kB          [emitted]  
                      logo.jpeg    21.2 kB          [emitted]  
-chunk    {0} vendor.a5e967daef39df7a55de.js (vendor) 1.81 MB [rendered]
+chunk    {0} vendor.3466235e660b7bda7802.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {0} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {0} [built]
@@ -625,7 +625,7 @@ chunk    {1} 1.169a2b843c41b2352bee.js (video) 44.1 kB {2} [rendered]
   [416] ./src/components/detail/tag/tag.js 1.09 kB {1} [built]
   [450] ./src/redux/actions/detail.js 301 bytes {1} [built]
   [452] ./src/redux/reducers/detail.js 1.97 kB {1} [built]
-chunk    {2} app.bb0cdcd147fb2fa4ba1e.js (app) 94.4 kB {0} [rendered]
+chunk    {2} app.37b7b936b26d74b846b1.js (app) 94 kB {0} [rendered]
     [0] ./src/main.js 1.2 kB {2} [built]
    [13] ./src/style/index.js 1.04 kB {2} [built]
    [42] ./src/components/home/common/sprite.js 979 bytes {2} [built]
@@ -678,7 +678,7 @@ chunk    {2} app.bb0cdcd147fb2fa4ba1e.js (app) 94.4 kB {0} [rendered]
   [446] ./src/components/home/footer/logos/icon.js 1.09 kB {2} [built]
   [447] ./src/components/home/footer/logos/logo.js 1.15 kB {2} [built]
   [448] ./src/components/home/footer/slogan.js 1.62 kB {2} [built]
-  [449] ./src/components/home/index.js 6.38 kB {2} [built]
+  [449] ./src/components/home/index.js 5.93 kB {2} [built] [1 error]
   [451] ./src/redux/actions/home.js 273 bytes {2} [built]
   [453] ./src/redux/reducers/home.js 1.04 kB {2} [built]
   [454] ./src/redux/sagas/detail.js 4.51 kB {2} [built]
@@ -693,3 +693,14 @@ chunk    {2} app.bb0cdcd147fb2fa4ba1e.js (app) 94.4 kB {0} [rendered]
   [522] ./~/css-loader!./~/sass-loader!./src/assets/scss/normalize.scss 2.19 kB {2} [built]
   [551] ./~/moment/locale ^\.\/.*$ 2.79 kB {2} [optional] [built]
   [657] ./src/assets/scss/normalize.scss 1.07 kB {2} [built]
+
+ERROR in ./src/components/home/index.js
+
+  [31merror[39m  [37mno-unused-vars[39m  "mediaSize" is defined but never used  
+  [4m[90m/Users/luliangxiao/Documents/github/React-Eyepetizer/src/components/home/index.js:8:10[39m[24m
+  [90mimport { mediaSize } from '@/style'[39m
+  [90m          ^[39m
+
+
+[31m[1m✖ 1 problem (1 error, 0 warnings)
+[22m[39m
