@@ -1,0 +1,13 @@
+{
+  "name": "React Eyepetizer",
+  "short_name": "Eyepetizer",
+  "icons": [{
+      "src": "./logo.jpeg",
+      "sizes": "256x256",
+      "type": "image/jpeg"
+    }],
+  "start_url": "/",
+  "background_color": "white",
+  "display": "standalone",
+  "theme_color": "white"
+}
