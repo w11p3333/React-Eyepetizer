@@ -55,7 +55,7 @@ npm run build
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
-
+[MIT](http://opensource.org/licenses/MIT)  
+Based on [kenberkeley's template](https://github.com/kenberkeley/react-demo)  
 Copyright (c) 2017-present, AppleCatKay
 
