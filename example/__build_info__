@@ -1,6 +1,6 @@
 Hash: 7cbfc94ce0c941240c01
 Version: webpack 1.14.0
-Time: 19913ms
+Time: 21091ms
                          Asset       Size  Chunks             Chunk Names
 vendor.85d4af149843da63ef38.js     616 kB       0  [emitted]  vendor
      1.3a835ae7b5e41e323e0f.js    20.4 kB       1  [emitted]  video
