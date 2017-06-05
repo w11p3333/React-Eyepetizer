@@ -14,7 +14,7 @@ import {
 export function * fetchHomeFeed (): any {
   yield take(FETCH_HOME_FEED)
   let homeFeed = yield select(state => state.homeFeed)
-  if (homeFeed) return
+  if (homeFeed) return // warm cache
   homeFeed = (yield call(homeService.fetchHomeFeed)).data
   yield put({
     type: SET_HOME_FEED,

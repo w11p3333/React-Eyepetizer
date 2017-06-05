@@ -44,6 +44,7 @@ function * fetchReplyList (id: number): any {
   })
 }
 
+// 监听到FETCH_DETAIL_FEED请求则开始获取数据
 export function * watchFetchDetail (): any {
   while (true) {
     const { payload: id } = yield take(FETCH_DETAIL_FEED)

@@ -23,5 +23,6 @@ ReactDOM.render(
 )
 // 生产环境下注册service-worker
 if (__PROD__ && 'serviceWorker' in navigator) {
+  console.log('注册servicer-workder')
   navigator.serviceWorker.register('./service-worker.js')
 }
