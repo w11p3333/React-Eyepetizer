@@ -1,13 +1,13 @@
 Hash: 7cbfc94ce0c941240c01
 Version: webpack 1.14.0
-Time: 23135ms
+Time: 19913ms
                          Asset       Size  Chunks             Chunk Names
 vendor.85d4af149843da63ef38.js     616 kB       0  [emitted]  vendor
      1.3a835ae7b5e41e323e0f.js    20.4 kB       1  [emitted]  video
    app.1a82f5534517663d7449.js    46.8 kB       2  [emitted]  app
                     index.html  785 bytes          [emitted]  
-                   favicon.ico    4.29 kB          [emitted]  
                  manifest.json  269 bytes          [emitted]  
+                   favicon.ico    4.29 kB          [emitted]  
                      logo.jpeg    21.2 kB          [emitted]  
 chunk    {0} vendor.85d4af149843da63ef38.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
