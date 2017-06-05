@@ -1,5 +1,4 @@
-// @lfow
-// import homeService from '@/apis/home'
+// @flow
 import {
   FETCH_HOME_FEED
 } from '../consts'
@@ -7,7 +6,7 @@ import {
 // ================================
 // Action Creator
 // ================================
-const fetchHomeFeed = _ => ({
+const fetchHomeFeed = (_: void): { type: string } => ({
   type: FETCH_HOME_FEED
 })
 

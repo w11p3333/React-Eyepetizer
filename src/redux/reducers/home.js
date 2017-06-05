@@ -4,9 +4,13 @@ import { createReducer } from './index'
 import {
   SET_HOME_FEED
 } from '../consts'
+import type {
+  HOME_FEED_STATE,
+  HOME_FEED_PAYLOAD
+} from '@/type'
 
 const homeFeed: Function = createReducer(initState.homeFeed, {
-  [SET_HOME_FEED]: (state, { payload }) => {
+  [SET_HOME_FEED]: (state: ?HOME_FEED_STATE, { payload } : { payload: HOME_FEED_PAYLOAD }) => {
     const [ daily ] = payload.dailyList
     const { videoList } = daily
     return videoList

@@ -13,9 +13,14 @@ import {
   SET_VIDEO_LIST,
   SET_REPLY_LIST
 } from '../consts'
+import type {
+  PLAY_VIDEO_INFO_PAYLOAD,
+  VIDEO_LIST_INFO_PAYLOAD,
+  REPLY_LIST_INFO_PAYLOAD
+} from '@/type'
 
 function * fetchVideoInfo (id: number): any {
-  let videoInfo = yield select(state => state.playVideoInfo)
+  let videoInfo: ?PLAY_VIDEO_INFO_PAYLOAD = yield select(state => state.playVideoInfo)
   if (videoInfo) return
   videoInfo = (yield call(detailService.fetchVideoInfo, id)).data
   yield put({
@@ -25,7 +30,7 @@ function * fetchVideoInfo (id: number): any {
 }
 
 function * fetchVideoList (id: number): any {
-  let videoList = yield select(state => state.videoListInfo)
+  let videoList: ?VIDEO_LIST_INFO_PAYLOAD = yield select(state => state.videoListInfo)
   if (videoList) return
   videoList = (yield call(detailService.fetchVideoList, id)).data
   yield put({
@@ -35,7 +40,7 @@ function * fetchVideoList (id: number): any {
 }
 
 function * fetchReplyList (id: number): any {
-  let replyList = yield select(state => state.replyListInfo)
+  let replyList: ?REPLY_LIST_INFO_PAYLOAD = yield select(state => state.replyListInfo)
   if (replyList) return
   replyList = (yield call(detailService.fetchReplyList, id)).data
   yield put({
