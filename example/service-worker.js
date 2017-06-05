@@ -38,7 +38,7 @@
 'use strict';
 
 var precacheConfig = [["./1.169a2b843c41b2352bee.js","8fbac5d1e3b8c692d4d2ec48c96ac003"],["./app.bb0cdcd147fb2fa4ba1e.js","af395ac599125d1bdb7ed459b48290ff"],["./favicon.ico","987ef8255cf8bc55dc7fb0ae90461ae9"],["./index.html","a57b29a243a23320765eb08b0d0ae26f"],["./logo.jpeg","fe7fb3e8e09cbcd42eef2036d833c0ba"],["./vendor.a5e967daef39df7a55de.js","2a23cdcb0f1fadcf432e69a5f42236d2"]];
-var cacheName = 'sw-precache-v3-react-eyepetizer-version-1.1-' + (self.registration ? self.registration.scope : '');
+var cacheName = 'sw-precache-v3-react-eyepetizer-version-1.2-' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];
