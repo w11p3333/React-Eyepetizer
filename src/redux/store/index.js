@@ -1,5 +1,9 @@
 // @flow
-import { applyMiddleware, compose, createStore } from 'redux'
+import { 
+  applyMiddleware,
+  compose,
+  createStore
+} from 'redux'
 import { createRootReducer } from '@/redux/reducers'
 import middlewares from './middlewares'
 import enhancers from './enhancers'
@@ -18,6 +22,7 @@ const store = createStore(
     ...enhancers
   )
 )
+// 让sagas生效
 sagaMiddleware.run(rootSaga)
 export default store
 

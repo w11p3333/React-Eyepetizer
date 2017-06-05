@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-export default class NotFound extends Component {
+class NotFound extends Component {
   static contextTypes = {
     router: React.PropTypes.object.isRequired
   }
@@ -15,3 +16,9 @@ export default class NotFound extends Component {
     return null
   }
 }
+
+NotFound.PropTypes = {
+  router: PropTypes.object.isRequired
+}
+
+export default NotFound

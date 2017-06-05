@@ -4,7 +4,10 @@
 // ========================================================
 import { useRouterHistory } from 'react-router'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
-import { routerMiddleware, syncHistoryWithStore } from 'react-router-redux'
+import { 
+  routerMiddleware,
+  syncHistoryWithStore
+} from 'react-router-redux'
 
 const browserHistory = useRouterHistory(createBrowserHistory)({
   basename: '' // 相当于 rootPath
@@ -20,6 +23,6 @@ export default function (store: Object) {
   return syncHistoryWithStore(
     browserHistory,
     store,
-    { selectLocationState: (state) => state.router }
+    { selectLocationState: state => state.router }
   )
 }
