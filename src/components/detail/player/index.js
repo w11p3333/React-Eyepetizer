@@ -15,48 +15,41 @@ class MyPlayer extends PureComponent {
   constructor (props) {
     super(props)
     this.state = {
-      startPlay: false
+      isPlaying: false
     }
     this.startPlay = this.startPlay.bind(this)
     this.stopPlay = this.stopPlay.bind(this)
   }
 
-  render () {
-    return (
-      <Container onClick={ this.stopPlay }>
-        <Video
-        controls={ this.state.startPlay }
-        url={ this.props.url } />
-        {
-          !this.state.startPlay &&
-          <PlayButton onClick={ this.startPlay } />
-        }
-      </Container>
-    )
-  }
-
   startPlay () {
-    const video = this.getVideoRef()
-    if (this.state.startPlay && video.paused) return
-    this.setState({ 
-      startPlay: true
-     }, _ => {
-      video.play()
+    this.setState({
+      isPlaying: true
     })
   }
 
   stopPlay () {
-    const video = this.getVideoRef()
-    if (!this.state.startPlay || video.paused) return
     this.setState({
-      startPlay: false
-    }, _ => {
-      video.pause()
+      isPlaying: false
     })
   }
 
-  getVideoRef () {
-    return document.getElementsByTagName('video')[0]
+  render () {
+    const { isPlaying } = this.state
+    return (
+      <Container>
+        <Video
+          onClick={ this.stopPlay }
+          handlerPlay={ this.startPlay } // 需要同步player controls 所控制的事件
+          handlerPause={ this.stopPlay }
+          isPlay={ isPlaying }
+          controls={ isPlaying }
+          url={ this.props.url } />
+        {
+          !isPlaying &&
+          <PlayButton onClick={ this.startPlay } />
+        }
+      </Container>
+    )
   }
 
 }

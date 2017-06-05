@@ -8,7 +8,6 @@ import moment from 'moment'
 import { mediaSize } from '@/style'
 
 // import { isMobile } from '@/utils'
-
 import Container from './container'
 // banner
 import Banner from './banner/container'
@@ -63,7 +62,7 @@ export default class Index extends Component {
 
   render () {
     const { homeFeed } = this.props
-    const { platform } = this.state
+    const { platform, isShowVideo, videoUrl, today } = this.state
     return (
       <Container>
 
@@ -71,13 +70,13 @@ export default class Index extends Component {
           <BannerMenu clickHandler={ this.handlerPlatform } />
           <BannerContent clickHandler={ this.handlerPlatform } />
           {
-            this.state.isShowVideo
-            ? <BannerPlayer url={ this.state.videoUrl } />
+            isShowVideo
+            ? <BannerPlayer isPlay autoPlay muted url={ videoUrl } />
             : <BannerAlbum />
           }
         </Banner>
 
-        <Divider text={ this.state.today } />
+        <Divider text={ today } />
         {
           homeFeed &&
           homeFeed.map(item => (
@@ -125,7 +124,7 @@ export default class Index extends Component {
         break
 
       default:
-        this.setState({ platform })
+        this.setState({ platform }) // WeChat iOS Android ''
         break
 
     }

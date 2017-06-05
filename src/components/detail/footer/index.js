@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import Logo from '@/components/detail/footer/logo'
-import QRCode from '@/components/detail/footer/qrcode'
-import QRTip from '@/components/detail/footer/qrtip'
-import Container from '@/components/detail/footer/container'
+import Logo from './logo'
+import QRCode from './qrcode'
+import QRTip from './qrtip'
+import Container from './container'
 
 /**
  * 底部

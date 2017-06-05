@@ -33,7 +33,10 @@ class MyModal extends PureComponent {
 
   render () {
     return (
-      <Container className={ this.props.isShow ? 'modal--show' : 'modal--hide' } onClick={ this.click } id="modal" >
+      <Container
+        id="modal"
+        className={ this.props.isShow ? 'modal--show' : 'modal--hide' } 
+        onClick={ this.click }>
         { this.getContent(this.props.platform) }
       </Container>
     )

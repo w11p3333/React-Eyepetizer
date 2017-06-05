@@ -4,7 +4,7 @@ import {
   fromJS
 } from 'immutable'
 
-import Loading from './loading'
+import Loading from '@/components/common/loading'
 import Container from './container'
 import Article from './article'
 import Player from './player'
@@ -22,8 +22,9 @@ export default class Detail extends Component {
 
   componentWillMount () {
     const ID = this.props.params.id
-    if (!ID) this.context.router.push('/')
-    else {
+    if (!ID) {
+      this.context.router.push('/')
+    } else {
       this.props.fetchDetailFeed(ID)
     }
   }
