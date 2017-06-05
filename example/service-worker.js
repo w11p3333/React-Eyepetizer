@@ -38,7 +38,7 @@
 'use strict';
 
 var precacheConfig = [["./1.3a835ae7b5e41e323e0f.js","d3b8d813bde5e2f3ea4c6c470f33ab11"],["./app.1a82f5534517663d7449.js","a83fbb728c37ff93a5744b763e18e404"],["./favicon.ico","987ef8255cf8bc55dc7fb0ae90461ae9"],["./index.html","e811afc799ac6d8032175e9bfc1049cd"],["./logo.jpeg","fe7fb3e8e09cbcd42eef2036d833c0ba"],["./vendor.85d4af149843da63ef38.js","a781b780ba803bede37d416802c4f736"]];
-var cacheName = 'sw-precache-v3-react-eyepetizer-version-1.9-' + (self.registration ? self.registration.scope : '');
+var cacheName = 'sw-precache-v3-react-eyepetizer-version-1.10-' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];
@@ -286,7 +286,7 @@ self.addEventListener('fetch', function(event) {
 // Runtime cache configuration, using the sw-toolbox library.
 
 toolbox.router.get(/^https:\/\/baobab\.kaiyanapp\.com\/api/, toolbox.networkFirst, {});
-toolbox.router.get(/\.(mp4|png|jpe?g|gif|svg)$/, toolbox.cacheFirst, {});
+toolbox.router.get(/\.(mp4|png|jpe?g|gif|svg)$/, toolbox.networkFirst, {});
 
 
 
