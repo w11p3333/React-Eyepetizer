@@ -21,6 +21,9 @@ ReactDOM.render(
   </Provider>,
   MOUNT_NODE
 )
+// 隐藏app-shell
+document.getElementById('app-shell').style.display = 'none'
+
 // 生产环境下注册service-worker
 if (__PROD__ && 'serviceWorker' in navigator) {
   console.log('注册servicer-workder')

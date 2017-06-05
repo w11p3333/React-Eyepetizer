@@ -12,8 +12,15 @@
   {% for (var css in o.htmlWebpackPlugin.files.css) { %}
   <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
   {% } %}
+  <style type="text/css">@keyframes rotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}.app-shell{position:absolute;height:100vh;width:100vw;background-color:#fff}.loading-static{background-image:url(./loading_out.png);background-size:cover;height:48px;width:70px;top:0;bottom:0;left:0;right:0;margin:auto;position:absolute}.loading-rotate{background-image:url(./loading_in.png);background-size:cover;height:48px;width:70px;animation:rotate .5s linear infinite;top:0;bottom:0;left:0;right:0;margin:auto;position:absolute}</style>
 </head>
 <body>
+
+  <div id="app-shell" class="app-shell">
+    <figure class="loading-static">
+      <figure class="loading-rotate" />
+    </figure>
+  </div>
 
   <div id="app"></div>
 

@@ -1,15 +1,17 @@
-Hash: 63fcc7a89ba0d2599db7
+Hash: 97eab8967e17aea51731
 Version: webpack 1.14.0
-Time: 19374ms
+Time: 17004ms
                          Asset       Size  Chunks             Chunk Names
-vendor.1cc43c61bd8df8d57ec0.js     616 kB       0  [emitted]  vendor
+vendor.77049efb4e44d444a2a4.js     616 kB       0  [emitted]  vendor
      1.3dac06c24247f9ac9a9f.js    20.2 kB       1  [emitted]  video
-   app.39d6f2fa64cff2b1e5a1.js    47.5 kB       2  [emitted]  app
-                    index.html  785 bytes          [emitted]  
-                 manifest.json  269 bytes          [emitted]  
-                     logo.jpeg    21.2 kB          [emitted]  
+   app.94248821dcd87808c2b0.js    47.6 kB       2  [emitted]  app
+                    index.html    1.47 kB          [emitted]  
+               loading_out.png     1.4 kB          [emitted]  
                    favicon.ico    4.29 kB          [emitted]  
-chunk    {0} vendor.1cc43c61bd8df8d57ec0.js (vendor) 1.81 MB [rendered]
+                loading_in.png  607 bytes          [emitted]  
+                     logo.jpeg    21.2 kB          [emitted]  
+                 manifest.json  269 bytes          [emitted]  
+chunk    {0} vendor.77049efb4e44d444a2a4.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {0} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {0} [built]
@@ -625,8 +627,8 @@ chunk    {1} 1.3dac06c24247f9ac9a9f.js (video) 43.8 kB {2} [rendered]
   [417] ./src/components/detail/tag/tag.js 1.09 kB {1} [built]
   [451] ./src/redux/actions/detail.js 301 bytes {1} [built]
   [453] ./src/redux/reducers/detail.js 1.99 kB {1} [built]
-chunk    {2} app.39d6f2fa64cff2b1e5a1.js (app) 96.4 kB {0} [rendered]
-    [0] ./src/main.js 1.24 kB {2} [built]
+chunk    {2} app.94248821dcd87808c2b0.js (app) 96.5 kB {0} [rendered]
+    [0] ./src/main.js 1.3 kB {2} [built]
    [13] ./src/style/index.js 1.04 kB {2} [built]
    [42] ./src/components/home/common/sprite.js 979 bytes {2} [built]
    [48] ./src/redux/consts/index.js 473 bytes {2} [built]
