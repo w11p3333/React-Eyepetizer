@@ -1,15 +1,15 @@
-Hash: a46eb600695479483b98
+Hash: 7cbfc94ce0c941240c01
 Version: webpack 1.14.0
-Time: 18776ms
+Time: 18635ms
                          Asset       Size  Chunks             Chunk Names
-vendor.5b1a7692136e0a5fc061.js     616 kB       0  [emitted]  vendor
-     1.169a2b843c41b2352bee.js    20.4 kB       1  [emitted]  video
-   app.b7b34e6a64b148ec0d63.js    46.7 kB       2  [emitted]  app
+vendor.85d4af149843da63ef38.js     616 kB       0  [emitted]  vendor
+     1.3a835ae7b5e41e323e0f.js    20.4 kB       1  [emitted]  video
+   app.1a82f5534517663d7449.js    46.8 kB       2  [emitted]  app
                     index.html  785 bytes          [emitted]  
+                   favicon.ico    4.29 kB          [emitted]  
                  manifest.json  269 bytes          [emitted]  
                      logo.jpeg    21.2 kB          [emitted]  
-                   favicon.ico    4.29 kB          [emitted]  
-chunk    {0} vendor.5b1a7692136e0a5fc061.js (vendor) 1.81 MB [rendered]
+chunk    {0} vendor.85d4af149843da63ef38.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {0} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {0} [built]
@@ -584,7 +584,7 @@ chunk    {0} vendor.5b1a7692136e0a5fc061.js (vendor) 1.81 MB [rendered]
   [678] ./~/symbol-observable/index.js 41 bytes {0} [built]
   [679] ./~/symbol-observable/lib/index.js 661 bytes {0} [built]
   [680] ./~/symbol-observable/lib/ponyfill.js 449 bytes {0} [built]
-chunk    {1} 1.169a2b843c41b2352bee.js (video) 44.1 kB {2} [rendered]
+chunk    {1} 1.3a835ae7b5e41e323e0f.js (video) 44.1 kB {2} [rendered]
    [71] ./src/components/common/container.js 782 bytes {1} [built]
   [152] ./src/components/detail/common/title.js 736 bytes {1} [built]
   [381] ./src/components/detail/article.js 901 bytes {1} [built]
@@ -624,8 +624,8 @@ chunk    {1} 1.169a2b843c41b2352bee.js (video) 44.1 kB {2} [rendered]
   [415] ./src/components/detail/tag/list.js 846 bytes {1} [built]
   [416] ./src/components/detail/tag/tag.js 1.09 kB {1} [built]
   [450] ./src/redux/actions/detail.js 301 bytes {1} [built]
-  [452] ./src/redux/reducers/detail.js 1.97 kB {1} [built]
-chunk    {2} app.b7b34e6a64b148ec0d63.js (app) 94.4 kB {0} [rendered]
+  [452] ./src/redux/reducers/detail.js 1.99 kB {1} [built]
+chunk    {2} app.1a82f5534517663d7449.js (app) 94.6 kB {0} [rendered]
     [0] ./src/main.js 1.2 kB {2} [built]
    [13] ./src/style/index.js 1.04 kB {2} [built]
    [42] ./src/components/home/common/sprite.js 979 bytes {2} [built]
@@ -644,7 +644,7 @@ chunk    {2} app.b7b34e6a64b148ec0d63.js (app) 94.4 kB {0} [rendered]
   [376] ./src/components/common/modal/container.js 932 bytes {2} [built]
   [377] ./src/components/common/modal/index.js 4.98 kB {2} [built]
   [378] ./src/components/common/modal/modal.js 1.01 kB {2} [built]
-  [379] ./src/components/common/modal/qrcode.js 789 bytes {2} [built]
+  [379] ./src/components/common/modal/qrcode.js 793 bytes {2} [built]
   [380] ./src/components/common/modal/text.js 718 bytes {2} [built]
   [417] ./src/components/home/banner/album/container.js 793 bytes {2} [built]
   [418] ./src/components/home/banner/album/image.js 1.26 kB {2} [built]
@@ -684,12 +684,12 @@ chunk    {2} app.b7b34e6a64b148ec0d63.js (app) 94.4 kB {0} [rendered]
   [454] ./src/redux/sagas/detail.js 4.51 kB {2} [built]
   [455] ./src/redux/sagas/home.js 1.62 kB {2} [built]
   [456] ./src/redux/sagas/index.js 1.78 kB {2} [built]
-  [457] ./src/redux/store/enhancers.js 477 bytes {2} [built]
+  [457] ./src/redux/store/enhancers.js 487 bytes {2} [built]
   [458] ./src/redux/store/middlewares.js 657 bytes {2} [built]
   [459] ./src/routes/detail.js 1.33 kB {2} [built]
   [460] ./src/routes/index.js 1.55 kB {2} [built]
   [461] ./src/utils/index.js 734 bytes {2} [built]
-  [462] ./src/views/notFound.js 1.79 kB {2} [built]
+  [462] ./src/views/notFound.js 1.93 kB {2} [built]
   [522] ./~/css-loader!./~/sass-loader!./src/assets/scss/normalize.scss 2.19 kB {2} [built]
   [551] ./~/moment/locale ^\.\/.*$ 2.79 kB {2} [optional] [built]
   [657] ./src/assets/scss/normalize.scss 1.07 kB {2} [built]
