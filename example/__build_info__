@@ -1,6 +1,6 @@
 Hash: 97eab8967e17aea51731
 Version: webpack 1.14.0
-Time: 24524ms
+Time: 29759ms
                          Asset       Size  Chunks             Chunk Names
 vendor.77049efb4e44d444a2a4.js     616 kB       0  [emitted]  vendor
      1.3dac06c24247f9ac9a9f.js    20.2 kB       1  [emitted]  video
@@ -9,8 +9,8 @@ vendor.77049efb4e44d444a2a4.js     616 kB       0  [emitted]  vendor
                 loading_in.png  607 bytes          [emitted]  
                loading_out.png     1.4 kB          [emitted]  
                    favicon.ico    4.29 kB          [emitted]  
-                 manifest.json  269 bytes          [emitted]  
                      logo.jpeg    21.2 kB          [emitted]  
+                 manifest.json  269 bytes          [emitted]  
 chunk    {0} vendor.77049efb4e44d444a2a4.js (vendor) 1.81 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {0} [built]
