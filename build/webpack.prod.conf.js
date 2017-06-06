@@ -72,15 +72,20 @@ module.exports = merge(baseConfig, {
       filename: 'css/[name].[contenthash].css'
     }),
     new SWPrecachePlugin({
-      cacheId: 'react-eyepetizer-version-1.20',
+      cacheId: 'react-eyepetizer-version-1.22',
       filename: 'service-worker.js',
       dontCacheBustUrlsMatching: /./,
       staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
       runtimeCaching: [
-        // {
-        //   urlPattern: /^https:\/\/baobab\.kaiyanapp\.com\/api/,
-        //   handler: 'networkFirst'
-        // }
+        // not cache https
+        {
+          urlPattern: /^https:\/\/baobab\.kaiyanapp\.com\/api\/feed/,
+          handler: 'networkFirst'
+        },
+        {
+          urlPattern: /^https:\/\/baobab\.kaiyanapp\.com\/api\/video/,
+          handler: 'networkFirst'
+        }
         // {
         //   urlPattern: /\.(mp4|png|jpe?g|gif|svg)$/,
         //   handler: 'networkFirst'
