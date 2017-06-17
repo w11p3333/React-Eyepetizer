@@ -3,8 +3,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
+import fastClick from 'fastclick'
 import store, { hashHistory } from '@/redux/store'
 import routes from '@/routes'
+
+// 移动端30ms的延迟
+fastClick.attach(document.body)
 
 // 检测不必要的更新
 if (__DEV__ && __WHY_DID_YOU_UPDATE__) {

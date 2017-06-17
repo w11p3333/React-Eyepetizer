@@ -2,7 +2,6 @@
 import {
   call,
   take,
-  select,
   put,
   fork
 } from 'redux-saga/effects'
@@ -20,9 +19,7 @@ import type {
 } from '@/type'
 
 function * fetchVideoInfo (id: number): any {
-  let videoInfo: ?PLAY_VIDEO_INFO_PAYLOAD = yield select(state => state.playVideoInfo)
-  if (videoInfo) return
-  videoInfo = (yield call(detailService.fetchVideoInfo, id)).data
+  const videoInfo: PLAY_VIDEO_INFO_PAYLOAD = (yield call(detailService.fetchVideoInfo, id)).data
   yield put({
     type: SET_VIDEO_INFO,
     payload: videoInfo
@@ -30,9 +27,7 @@ function * fetchVideoInfo (id: number): any {
 }
 
 function * fetchVideoList (id: number): any {
-  let videoList: ?VIDEO_LIST_INFO_PAYLOAD = yield select(state => state.videoListInfo)
-  if (videoList) return
-  videoList = (yield call(detailService.fetchVideoList, id)).data
+  const videoList: VIDEO_LIST_INFO_PAYLOAD = (yield call(detailService.fetchVideoList, id)).data
   yield put({
     type: SET_VIDEO_LIST,
     payload: videoList
@@ -40,9 +35,7 @@ function * fetchVideoList (id: number): any {
 }
 
 function * fetchReplyList (id: number): any {
-  let replyList: ?REPLY_LIST_INFO_PAYLOAD = yield select(state => state.replyListInfo)
-  if (replyList) return
-  replyList = (yield call(detailService.fetchReplyList, id)).data
+  const replyList: REPLY_LIST_INFO_PAYLOAD = (yield call(detailService.fetchReplyList, id)).data
   yield put({
     type: SET_REPLY_LIST,
     payload: replyList
