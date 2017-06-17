@@ -1,17 +1,17 @@
-Hash: 8383023a733bfbf050de
+Hash: 47614646d5fe527922b1
 Version: webpack 1.14.0
-Time: 25436ms
+Time: 23044ms
                          Asset       Size  Chunks             Chunk Names
-vendor.65fa2c6815c204f4f0f8.js     624 kB       0  [emitted]  vendor
+vendor.f3f14e64e4156fee5abb.js     624 kB       0  [emitted]  vendor
      1.3dac06c24247f9ac9a9f.js    20.2 kB       1  [emitted]  video
-   app.57f70e2a1a75c58d4e8e.js    47.6 kB       2  [emitted]  app
+   app.ab1c63cb8c682be853af.js    47.2 kB       2  [emitted]  app
                     index.html    1.47 kB          [emitted]  
+                   favicon.ico    4.29 kB          [emitted]  
                 loading_in.png  607 bytes          [emitted]  
                loading_out.png     1.4 kB          [emitted]  
-                 manifest.json  269 bytes          [emitted]  
-                   favicon.ico    4.29 kB          [emitted]  
                      logo.jpeg    21.2 kB          [emitted]  
-chunk    {0} vendor.65fa2c6815c204f4f0f8.js (vendor) 1.84 MB [rendered]
+                 manifest.json  269 bytes          [emitted]  
+chunk    {0} vendor.f3f14e64e4156fee5abb.js (vendor) 1.84 MB [rendered]
     [1] ./~/moment/moment.js 129 kB {0} [built]
     [2] ./~/babel-runtime/helpers/taggedTemplateLiteral.js 567 bytes {0} [built]
     [3] ./~/styled-components/lib/index.js 3.13 kB {0} [built]
@@ -628,7 +628,7 @@ chunk    {1} 1.3dac06c24247f9ac9a9f.js (video) 43.8 kB {2} [rendered]
   [417] ./src/components/detail/tag/tag.js 1.09 kB {1} [built]
   [451] ./src/redux/actions/detail.js 301 bytes {1} [built]
   [453] ./src/redux/reducers/detail.js 1.99 kB {1} [built]
-chunk    {2} app.57f70e2a1a75c58d4e8e.js (app) 96.6 kB {0} [rendered]
+chunk    {2} app.ab1c63cb8c682be853af.js (app) 95.6 kB {0} [rendered]
     [0] ./src/main.js 1.44 kB {2} [built]
    [13] ./src/style/index.js 1.04 kB {2} [built]
    [42] ./src/components/home/common/sprite.js 979 bytes {2} [built]
@@ -684,7 +684,7 @@ chunk    {2} app.57f70e2a1a75c58d4e8e.js (app) 96.6 kB {0} [rendered]
   [450] ./src/components/home/index.js 6.55 kB {2} [built]
   [452] ./src/redux/actions/home.js 273 bytes {2} [built]
   [454] ./src/redux/reducers/home.js 1.04 kB {2} [built]
-  [455] ./src/redux/sagas/detail.js 4.51 kB {2} [built]
+  [455] ./src/redux/sagas/detail.js 3.46 kB {2} [built]
   [456] ./src/redux/sagas/home.js 1.62 kB {2} [built]
   [457] ./src/redux/sagas/index.js 1.78 kB {2} [built]
   [458] ./src/redux/store/enhancers.js 487 bytes {2} [built]
