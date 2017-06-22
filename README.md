@@ -51,7 +51,7 @@ npm run build
 
 ## Changelog
 
-2017.4.11 first commit
+2017.4.11 first commit  
 2017.6.22 update to webpack 3.0
 
 ## License
