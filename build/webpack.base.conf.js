@@ -17,7 +17,7 @@ module.exports = {
     publicPath: config.dev.assetsSubDirectory
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
     alias: {
       // ================================
       // 自定义路径别名
@@ -25,15 +25,12 @@ module.exports = {
       '@': path.join(src, '')
     }
   },
-  resolveLoader: {
-    root: path.join(rootPath, 'node_modules')
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         loaders: (function() {
-          var _loaders = ['babel?' + JSON.stringify({
+          var _loaders = ['babel-loader?' + JSON.stringify({
             cacheDirectory: true,
             plugins: [
               'transform-runtime',
@@ -45,11 +42,11 @@ module.exports = {
                 presets: ['react-optimize']
               }
             }
-          }), 'eslint']
+          }), 'eslint-loader']
 
           // 开发环境下引入 React Hot Loader
           if (env === 'development') {
-            _loaders.unshift('react-hot')
+            _loaders.unshift('react-hot-loader')
           }
           return _loaders
         })(),
@@ -58,23 +55,23 @@ module.exports = {
       },
       {
           test: /\.css$/,
-          loader: 'style!css'
+          loader: 'style-loader!css-loader'
       },
       {
           test: /\.scss$/,
-          loader: 'style!css!sass'
+          loader: 'style-loader!css-loader!sass-loader'
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json-loader'
       }, 
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       }, 
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           limit: 10240, // 10KB 以下使用 base64
           name: 'img/[name]-[hash:6].[ext]'
@@ -86,10 +83,12 @@ module.exports = {
       }
     ]
   },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      eslint: {
+        formatter: require('eslint-friendly-formatter')
+      }
+    }),
     new NyanProgressPlugin(), // 进度条
     new webpack.DefinePlugin({
       'process.env': { // 这是给 React / Redux 打包用的
