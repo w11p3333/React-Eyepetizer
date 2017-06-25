@@ -5,5 +5,10 @@
     "transform-runtime",
     "transform-decorators-legacy"
    ],
-  "comments": false
+  "comments": false,
+  "env": {
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
 }
