@@ -1,16 +1,16 @@
 Hash: 27dc73434dbda38ee6f7
 Version: webpack 3.0.0
-Time: 20953ms
+Time: 30714ms
                          Asset       Size  Chunks                    Chunk Names
      0.da59919b98968a3de959.js    20.3 kB       0  [emitted]         video
    app.c0753c8d8ae0b516eaf8.js      48 kB       1  [emitted]         app
 vendor.5ffb1556c7a2b5e730a6.js     615 kB       2  [emitted]  [big]  vendor
                     index.html    1.47 kB          [emitted]         
-               loading_out.png     1.4 kB          [emitted]         
                    favicon.ico    4.29 kB          [emitted]         
                 loading_in.png  607 bytes          [emitted]         
-                     logo.jpeg    21.2 kB          [emitted]         
+               loading_out.png     1.4 kB          [emitted]         
                  manifest.json  269 bytes          [emitted]         
+                     logo.jpeg    21.2 kB          [emitted]         
    [1] ./node_modules/react/react.js 56 bytes {2} [built]
   [11] ./node_modules/babel-runtime/helpers/jsx.js 1.46 kB {2} [built]
   [54] ./node_modules/react-router/lib/PatternUtils.js 6.29 kB {2} [built]
