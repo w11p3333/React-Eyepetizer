@@ -19,17 +19,18 @@ module.exports = merge(baseConfig, {
     filename: '[name].[chunkhash].js'
   },
 
-  // 生产环境分离css
-  loaders: [
-    {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css')
-    },
-    {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style', 'css!sass')
-    }
-  ],
+  // module: {
+  //   rules: [
+  //       {
+  //         test: /\.css$/,
+  //         loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+  //       },
+  //       {
+  //         test: /\.scss$/,
+  //         loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
+  //       }
+  //   ]
+  // },
 
   plugins: [
     new CleanWebpackPlugin('dist', {
@@ -43,13 +44,12 @@ module.exports = merge(baseConfig, {
         ignore: ['*.md']
       }
     ]),
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       }
     }),
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
@@ -72,7 +72,7 @@ module.exports = merge(baseConfig, {
       filename: 'css/[name].[contenthash].css'
     }),
     new SWPrecachePlugin({
-      cacheId: 'react-eyepetizer-version-1.25',
+      cacheId: 'react-eyepetizer-version-1.28',
       filename: 'service-worker.js',
       dontCacheBustUrlsMatching: /./,
       staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],

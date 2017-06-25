@@ -1,3 +1,4 @@
+const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const config = require('./config')
@@ -5,6 +6,9 @@ const baseConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
+const rootPath = path.resolve(__dirname, '..') // 项目根目录
+const src = path.join(rootPath, 'src') // 开发源码目录
 
 module.exports = merge(baseConfig, {
 
@@ -23,6 +27,23 @@ module.exports = merge(baseConfig, {
     path: config.dev.distPath,
     publicPath: config.dev.assetsPublicPath,
     filename: '[name].js'
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        include: src,
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'react-hot-loader',
+        include: src,
+        exclude: /node_modules/
+      }
+    ]
   },
 
   plugins: [

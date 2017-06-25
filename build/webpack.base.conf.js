@@ -27,29 +27,20 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   include: src,
+      //   exclude: /node_modules/,
+      //   options: {
+      //     formatter: require('eslint-friendly-formatter')
+      //   }
+      // },
       {
         test: /\.(js|jsx)$/,
-        loaders: (function() {
-          var _loaders = ['babel-loader?' + JSON.stringify({
-            cacheDirectory: true,
-            plugins: [
-              'transform-runtime',
-              'transform-decorators-legacy'
-            ],
-            presets: ['es2015', 'react', 'stage-0'],
-            env: {
-              production: {
-                presets: ['react-optimize']
-              }
-            }
-          }), 'eslint-loader']
-
-          // 开发环境下引入 React Hot Loader
-          if (env === 'development') {
-            _loaders.unshift('react-hot-loader')
-          }
-          return _loaders
-        })(),
+        loader: 'babel-loader',
+        enforce: 'pre',
         include: src,
         exclude: /node_modules/
       },
@@ -84,11 +75,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      eslint: {
-        formatter: require('eslint-friendly-formatter')
-      }
-    }),
     new NyanProgressPlugin(), // 进度条
     new webpack.DefinePlugin({
       'process.env': { // 这是给 React / Redux 打包用的
