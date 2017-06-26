@@ -1,6 +1,6 @@
 Hash: 9de915994cd58026b0e5
 Version: webpack 3.0.0
-Time: 29754ms
+Time: 40874ms
                          Asset       Size  Chunks                    Chunk Names
      0.c5c13ce59ed72aeec809.js    20.4 kB       0  [emitted]         video
    app.572e6e0a882aeed29df7.js    48.1 kB       1  [emitted]         app

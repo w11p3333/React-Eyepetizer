@@ -33,6 +33,7 @@ module.exports = merge(baseConfig, {
   // },
 
   plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new CleanWebpackPlugin('dist', {
       root: config.build.distPath,
       verbose: false
@@ -72,7 +73,7 @@ module.exports = merge(baseConfig, {
       filename: 'css/[name].[contenthash].css'
     }),
     new SWPrecachePlugin({
-      cacheId: 'react-eyepetizer-version-1.28',
+      cacheId: 'react-eyepetizer-version-1.29',
       filename: 'service-worker.js',
       dontCacheBustUrlsMatching: /./,
       staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
