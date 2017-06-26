@@ -1,29 +1,29 @@
-Hash: 084d186e5d504ff7f2be
+Hash: 9de915994cd58026b0e5
 Version: webpack 3.0.0
-Time: 60836ms
+Time: 29754ms
                          Asset       Size  Chunks                    Chunk Names
-     0.3fbdacd9b723edaa4af0.js    20.4 kB       0  [emitted]         video
-   app.15572c381506d7e86d8a.js    48.1 kB       1  [emitted]         app
-vendor.69a729986e867566ba73.js     615 kB       2  [emitted]  [big]  vendor
+     0.c5c13ce59ed72aeec809.js    20.4 kB       0  [emitted]         video
+   app.572e6e0a882aeed29df7.js    48.1 kB       1  [emitted]         app
+vendor.0136cd610c377c511244.js     614 kB       2  [emitted]  [big]  vendor
                     index.html    1.47 kB          [emitted]         
-               loading_out.png     1.4 kB          [emitted]         
                    favicon.ico    4.29 kB          [emitted]         
+               loading_out.png     1.4 kB          [emitted]         
                 loading_in.png  607 bytes          [emitted]         
                      logo.jpeg    21.2 kB          [emitted]         
                  manifest.json  269 bytes          [emitted]         
    [1] ./node_modules/react/react.js 56 bytes {2} [built]
   [11] ./node_modules/babel-runtime/helpers/jsx.js 1.46 kB {2} [built]
-  [54] ./node_modules/react-router/lib/PatternUtils.js 6.29 kB {2} [built]
-  [66] ./src/redux/reducers/index.js 1.24 kB {1} [built]
-  [78] ./node_modules/react-router/lib/RouterContext.js 5.28 kB {2} [built]
   [84] ./node_modules/react-router/lib/index.js 4.6 kB {2} [built]
  [123] ./node_modules/react-redux/lib/index.js 475 bytes {2} [built]
- [124] ./node_modules/redux/es/index.js 1.08 kB {2} [built]
  [154] ./node_modules/react-dom/index.js 63 bytes {2} [built]
- [201] ./src/redux/store/index.js 1.31 kB {1} [built]
- [345] ./src/main.js 1.44 kB {1} [built]
- [478] ./node_modules/react-router/lib/IndexLink.js 908 bytes {2} [built]
- [493] ./node_modules/fastclick/lib/fastclick.js 26 kB {2} [built]
- [544] ./src/routes/index.js 1.55 kB {1} [built]
- [570] ./src/routes/detail.js 1.33 kB {1} [built]
-    + 647 hidden modules
+ [196] ./src/redux/store/index.js 1.31 kB {1} [built]
+ [338] ./src/main.js 1.44 kB {1} [built]
+ [473] ./node_modules/react-router/lib/applyRouterMiddleware.js 2.3 kB {2} [built]
+ [474] ./node_modules/react-router/lib/browserHistory.js 550 bytes {2} [built]
+ [475] ./node_modules/react-router/lib/hashHistory.js 535 bytes {2} [built]
+ [476] ./node_modules/fastclick/lib/fastclick.js 26 kB {2} [built]
+ [493] ./src/redux/store/middlewares.js 657 bytes {1} [built]
+ [495] ./src/redux/store/enhancers.js 487 bytes {1} [built]
+ [525] ./src/routes/index.js 1.55 kB {1} [built]
+ [551] ./src/routes/detail.js 1.33 kB {1} [built]
+    + 628 hidden modules
