@@ -20,7 +20,7 @@ a simple react demo simulate `Responsive/PWA` [eyeptizer website](http://www.kai
 
 ### Web
 
-[demo](https://w11p3333.github.io/React-Eyepetizer/example)
+[demo](https://luliangxiao.com/eyepetizer/)
 
 ### Mobile
 
