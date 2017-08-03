@@ -19,12 +19,15 @@ if (__DEV__ && __WHY_DID_YOU_UPDATE__) {
 // 将组件挂载
 const MOUNT_NODE = document.getElementById('app')
 
-ReactDOM.render(
-  <Provider store={ store }>
-    <Router history={ hashHistory } children={ routes } />
-  </Provider>,
-  MOUNT_NODE
-)
+// 推入下个循环让app-shell必然会渲染成功
+setTimeout(_ => {
+  ReactDOM.render(
+    <Provider store={ store }>
+      <Router history={ hashHistory } children={ routes } />
+    </Provider>,
+    MOUNT_NODE
+  )
+}, 0)
 // 隐藏app-shell
 document.getElementById('app-shell').style.display = 'none'
 
