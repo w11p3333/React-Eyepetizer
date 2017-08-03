@@ -17,17 +17,15 @@ class MyPlayer extends PureComponent {
     this.state = {
       isPlaying: false
     }
-    this.startPlay = this.startPlay.bind(this)
-    this.stopPlay = this.stopPlay.bind(this)
   }
 
-  startPlay () {
+  startPlay = _ => {
     this.setState({
       isPlaying: true
     })
   }
 
-  stopPlay () {
+  stopPlay = _ => {
     this.setState({
       isPlaying: false
     })

@@ -28,7 +28,6 @@ class MyModal extends PureComponent {
 
   constructor (props) {
     super(props)
-    this.click = this.click.bind(this)
   }
 
   render () {
@@ -42,7 +41,7 @@ class MyModal extends PureComponent {
     )
   }
 
-  click (event) {
+  click = event => {
     if (event.target.id === 'modal') {
       this.props.close()
     }

@@ -40,7 +40,6 @@ export default class Index extends Component {
       videoUrl: 'http://static.kaiyanapp.com/eyepetizer-web/homepage.mp4',
       isShowVideo: this.isShowVideo() // mount并不会触发resize
     }
-    this.handlerPlatform = this.handlerPlatform.bind(this)
   }
 
   componentWillMount () {
@@ -63,6 +62,7 @@ export default class Index extends Component {
   render () {
     const { homeFeed } = this.props
     const { platform, isShowVideo, videoUrl, today } = this.state
+    console.log('render次数')
     return (
       <Container>
 
@@ -107,7 +107,7 @@ export default class Index extends Component {
   }
 
   // 处理平台信息
-  handlerPlatform (platform) {
+  handlerPlatform = platform => {
     platform = platform || null
     switch (platform) {
 
